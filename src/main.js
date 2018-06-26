@@ -1,10 +1,11 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App'
 import router from './router'
 import './registerServiceWorker'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
+
 import VueProgressiveImage from 'vue-progressive-image'
 import VueAMap from 'vue-amap'
 
@@ -31,8 +32,9 @@ VueAMap.initAMapApiLoader({
 });
 
 new Vue({
+  el: '#app',
   router,
-  render: h => h(App),
-  components: { APP },
-  el: '#app'
-}).$mount('#app')
+  components: { App },
+  template: '<App/>',
+  render: h => h(App)
+})
