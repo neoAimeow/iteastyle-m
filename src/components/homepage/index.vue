@@ -71,12 +71,12 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'iconfont';  /* project id 718738 */
-  src: url('//at.alicdn.com/t/font_718738_jpis7s1zgd.eot');
-  src: url('//at.alicdn.com/t/font_718738_jpis7s1zgd.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_718738_jpis7s1zgd.woff') format('woff'),
-  url('//at.alicdn.com/t/font_718738_jpis7s1zgd.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_718738_jpis7s1zgd.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 721549 */
+  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot');
+  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.woff') format('woff'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.svg#iconfont') format('svg');
 }
 span {
     font-family: iconfont;
