@@ -87,6 +87,7 @@ body,
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 20px;
 }
 .home-foot-left{
   display: flex;

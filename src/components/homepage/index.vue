@@ -9,7 +9,7 @@
             <div class="index-head-logo">
               <span style="letter-spacing:3px;font-size:18px;word-break:keep-all;white-space:nowrap;">杭式下午茶，有初恋的温度</span>
               <span style="letter-spacing:-0.4px;font-size:12px;word-break:keep-all;white-space:nowrap;">茶为国饮，杭为茶都，一份伴手礼，遥遥西湖情</span>
-              <div class="index-foot-right-font">
+              <div class="index-head-logo-font">
                 <div style="border:solid 2px #eaffbd;border-radius:5px;"><span style="font-size:30px;padding:5px;">&#xe6cf;</span></div>
                 <div style="margin-left:12px;font-weight:bold;font-size:18px;">ONLINE SHOPPING</div>
               </div>
@@ -80,5 +80,20 @@ export default {
 }
 span {
     font-family: iconfont;
+}
+.index-head-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9dc135;
+    color: white;
+}
+.index-head-logo-font{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.index-main-img{
+    margin-top: 20px;
 }
 </style>
