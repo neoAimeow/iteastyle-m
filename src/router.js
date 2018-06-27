@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import HomeIndex from '@/components/homepage/index.vue'
-import CompanyStory from '@/components/homepage/companyStory.vue'
 import ProductDisplay from '@/components/homepage/productDisplay.vue'
 import ClassicCase from '@/components/homepage/classicCase.vue'
 import TeaState from '@/components/homepage/teaState.vue'
@@ -21,11 +20,6 @@ export default new Router({
       path: '/',
       name: 'homeIndex',
       component: HomeIndex
-    },
-    {
-      path: '/homepage/companyStory',
-      name: 'companyStory',
-      component: CompanyStory
     },
     {
       path: '/homepage/productDisplay',

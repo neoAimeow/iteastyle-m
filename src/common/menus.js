@@ -4,11 +4,6 @@ const menus = [{
     icon: ''
 },
 {
-    title: '公司故事',
-    path: '/homepage/companyStory',
-    icon: ''
-},
-{
     title: '产品展示',
     path: '/homepage/productDisplay',
     icon: ''
