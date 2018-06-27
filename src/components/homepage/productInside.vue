@@ -63,7 +63,7 @@ created: function() {
 
     .name-border{
         width:205px;
-        height:50px;
+        height:60px;
         border:1px dotted #9dc135;
         display: flex;
         flex-direction: row;
