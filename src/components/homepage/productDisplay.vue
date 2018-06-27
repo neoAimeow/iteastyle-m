@@ -5,7 +5,7 @@
         <div class="product-name" v-for="(item,key) in items" :key="key">
             <router-link :to="{path:'/homepage/productInside',query: {id: item.id}}">                        
                 <img class="pd-img" :src="item.imageArr[0]">                       
-                <span class="pd-span">{{item.title}}</span>
+                <span>{{item.title}}</span>
             </router-link>
         </div>
     </div>
@@ -78,25 +78,6 @@ a{
     border-bottom:2px solid #9dc135;
 }
 
-.pd-title {
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pd-title-picture {
-    min-width: 1300px;
-    width: 100%;
-    height: 150px;
-    position: absolute;
-    z-index: -1;
-}
-
-.pd-title-logo {
-  text-align: center;
-}
-
 .pd-ct {
   margin: 0 auto;
   max-width: 600px;
@@ -106,8 +87,6 @@ a{
   margin-top: 40px;
   margin-bottom: 20px;
 }
-
-
 
 .pd-img {
   width: 265px;
