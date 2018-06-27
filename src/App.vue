@@ -6,9 +6,9 @@
         <img class="home-head-bgimg2" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
       </div>
       <div class="home-head-menu">
-        <div class="home-head-icon"><span>&#xe633;</span><span>&#xe618;</span><span>&#xe60e;</span><span>&#xe6df;</span><span>&#xe9e5;</span><span>&#xe675;</span></div>
+        <div class="home-head-icon"><span>&#xe633;</span><span>&#xe60e;</span><span>&#xe6df;</span><span>&#xe9e5;</span><span>&#xe675;</span></div>
         <el-menu class="el-menu-demo" active-text-color="#81b316" background-color="#ffffff" default-active="首页" :router="true" mode="horizontal">
-          <el-menu-item style="margin-right:-20px;" :index="data.title" v-for="(data,key) in menu" :key="key" :label="key" :route="data.path">
+          <el-menu-item :index="data.title" v-for="(data,key) in menu" :key="key" :label="key" :route="data.path">
             {{data.title}} 
           </el-menu-item>        
         </el-menu>
@@ -77,7 +77,7 @@ body,
 }
 .home-head-menu{
   width: 100%;
-  margin-left: -10px;
+  margin-left: -5px;
 }
 .el-menu-demo{
   display: flex;
