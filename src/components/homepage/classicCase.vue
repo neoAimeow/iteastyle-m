@@ -19,6 +19,7 @@
     </div>
     </router-link>
 </div>
+
 </div>
 </template>
 
@@ -26,7 +27,7 @@
 export default {
   data() {
     return {
-      items:{}
+      items:[]
     }
   },
   created: function() {

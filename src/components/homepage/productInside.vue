@@ -6,11 +6,12 @@
         </div>
         
     <div class="pdinside-body">
-        <div v-for="(img,key) in imgs" :key="key" >          
-            <div v-if="key==1" class="pd-introduction">
-                <span class="pd-word">{{content}}</span>
+        <div v-for="(img,key) in imgs" :key="key" >  
+            <img  class="body-img" :src="img" alt="">        
+            <div v-if="key==0" class="pd-introduction">
+                <span class="pd-word" v-html="content"></span>
             </div>
-            <img  class="body-img" :src="img" alt="">
+            
         </div>
     </div>
 
@@ -23,9 +24,7 @@
 export default {
     data() {
         return {
-            imgs:{
-                    
-            },
+            imgs:[],
             content:'',
             title: ''
         }
