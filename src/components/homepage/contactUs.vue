@@ -114,5 +114,6 @@ export default {
 }
 .cu-content-map-style{
     width: 300px;
+    border: 5px solid rgba(157,193,53,0.6);
 }
 </style>
