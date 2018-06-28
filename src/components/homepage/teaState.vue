@@ -51,6 +51,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 650px;
 }
 .ts-main{
     display: flex;
@@ -70,10 +71,12 @@ a{
     border-radius: 5px;
     margin-left: -65%;
     margin-top: -2%;
+    color: white;
 }
 .ts-main-center{
     margin-top: 20px;
     font-size: 10px;
     width: 80%;
+    color: #626262;
 }
 </style>

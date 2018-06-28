@@ -95,10 +95,13 @@ body,
   flex-direction: row;
   justify-content: space-around;
   margin-top: 20px;
+  height: 150px;
+  background-color: #dad6d6;
 }
 .home-foot-left{
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .home-foot-left-logo{
  
@@ -112,5 +115,6 @@ body,
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
 }
 </style>
