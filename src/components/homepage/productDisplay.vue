@@ -76,12 +76,14 @@ a{
     margin: 0;
     padding: 0;
     border-bottom:2px solid #9dc135;
+    width: 100%;
 }
 
 .pd-ct {
   margin: 0 auto;
   max-width: 97%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; 
   margin-top: 40px;
@@ -89,13 +91,13 @@ a{
 }
 
 .pd-img {
-  width: 180px;
+  width: 80px;
   height: 120px;
   margin-bottom: 10px;
 }
 
 .product-name {
-  width:180px;
+  width:80px;
   text-align: center;
   margin: 15px;
   color: #626262;
