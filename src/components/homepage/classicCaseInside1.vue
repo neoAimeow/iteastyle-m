@@ -94,41 +94,44 @@ created: function() {
     color:#626262;
 }
 .case-body{
-    width:99%;   
+    width:100%;   
     display: flex;
     flex-wrap:wrap;
-    
-    margin: 0 auto;
+    justify-content:center;
+    align-items: center;   
+   
     margin-top:40px; 
     
 }
 
 .picture{
-    width:305px;
-    height: 220px;
-    margin-bottom: 30px;
+    width:130px;
+    height: 80px;
+    margin:10px;
 }
 
 .case-picture{
-    width:305px;
-    height: 220px;
+    width:130px;
+    height: 80px;
     position:absolute;
     z-index: -1;
 }
 .case-title{
-    width:305px;   
+    width:130px;   
     background-color: rgba(174,203,87, 0.83);
     text-align: center;
     color: white;
-    line-height: 45px;
+    line-height: 25px;
     position: relative;
-    top: 160px;
+    top: 45px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
 }
 .case-foot{
-    margin: 0 auto;
+    
+    
     margin-bottom: 40px;
+
 }
 </style>

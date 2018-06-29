@@ -86,18 +86,18 @@ a{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; 
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .pd-img {
-  width: 80px;
-  height: 120px;
+  width: 130px;
+  height: 80px;
   margin-bottom: 10px;
 }
 
 .product-name {
-  width:80px;
+  width:130px;
   text-align: center;
   margin: 15px;
   color: #626262;
