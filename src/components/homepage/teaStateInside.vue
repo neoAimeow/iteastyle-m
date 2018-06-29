@@ -46,25 +46,43 @@ created: function() {
 }
 </script>
 
-<style  scoped>
+<style lang="scss" scoped>
 .tsI-container{
-    /* //height: 900px; */
+    //height: 900px;
     border-bottom:2px solid #9dc135;
+    width:100%;
 }
-
+.tsI-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
+}
+.tsI-head-bgimg{
+    height: 200px;
+    min-width: 1300px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.tsI-head-logo{
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+}
 .tsI-main-head{
     margin-top: 20px;
     text-align: center;
 }
 .tsI-main-body{
-    /* //height: 600px; */
+    //height: 600px;
     width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* //background-color: blue; */
+    //background-color: blue;
     margin-top: 10px;
     margin-bottom: 40px;
 }
