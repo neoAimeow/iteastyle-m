@@ -6,7 +6,7 @@
         </div>
         
     <div class="pdinside-body">
-        <div v-for="(img,key) in imgs" :key="key" >  
+        <div v-for="(img,key) in imgs" :key="key" class="img">  
             <img  class="body-img" :src="img" alt="">        
             <div v-if="key==0" class="pd-introduction">
                 <span class="pd-word" v-html="content"></span>
@@ -57,7 +57,8 @@ created: function() {
         border-bottom:2px solid #9dc135;
         display: flex;
         flex-direction: column;
-        justify-content:center;
+       
+        
     }
 
     .name-border{
@@ -88,6 +89,9 @@ created: function() {
         width:97%; 
         margin:0 auto; 
         margin-bottom: 40px;
+        
+       
+        
     }
 
     .pd-introduction{
@@ -100,6 +104,7 @@ created: function() {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top:20px;
     }
 
     .pd-word{
@@ -107,9 +112,17 @@ created: function() {
         text-align: center;
 
     }
+    .img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        margin-bottom: 20px;
+    }
     .body-img{
         width:97%;
-        
+       
     }
 
 
