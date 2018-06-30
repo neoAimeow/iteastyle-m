@@ -55,6 +55,9 @@ export default {
      this.$ajax.get('/contactUsData', {
 
     })
+    this.$ajax.get('/companyStory', {
+
+    })
     .then(function (response) {
       console.log(response);
       that.info = response.data.model;

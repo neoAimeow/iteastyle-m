@@ -6,12 +6,16 @@
         <img class="home-head-bgimg2" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
       </div>
       <div class="home-head-menu">
-        <div class="home-head-icon"><span>&#xe633;</span><span>&#xe60e;</span><span>&#xe6df;</span><span>&#xe9e5;</span><span>&#xe675;</span></div>
-        <el-menu class="el-menu-demo" active-text-color="#81b316" background-color="#ffffff" default-active="首页" :router="true" mode="horizontal">
-          <el-menu-item :index="data.title" v-for="(data,key) in menu" :key="key" :label="key" :route="data.path">
-            {{data.title}} 
-          </el-menu-item>        
-        </el-menu>
+        <div class="home-head-icon" v-for="(data,key) in menu" :key="key" :label="key">
+          <span>{{data.icon}}</span>
+        </div>
+        <div class="home-head-list">
+        <div style="margin-left:10px;"  v-for="(data,key) in menu" :key="key" :label="key" >
+          <router-link :index="data.title" :to="data.path">
+            {{data.title}}
+          </router-link>
+        </div>
+        </div>
       </div>
     </div>
   <router-view></router-view>
@@ -49,9 +53,16 @@ export default {
 </script>
 
 <style>
-ul,li{
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'iconfont';  /* project id 721549 */
+  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot');
+  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.woff') format('woff'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.svg#iconfont') format('svg');
+}
+span{
+  font-family: iconfont;
 }
 html,
 body,
@@ -77,18 +88,12 @@ body,
 }
 .home-head-menu{
   width: 100%;
-  margin-left: -5px;
 }
-.el-menu-demo{
+.home-head-list{
+  min-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.home-head-icon{
-  font-size: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .home-foot{
   display: flex;
