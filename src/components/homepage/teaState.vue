@@ -1,47 +1,54 @@
 <template>
     <div class="ts-container">
-        <router-link class="ts-main" to="./teaStateInside">
-            <div class="ts-main-head">
-                <span>这份小确信，您想要么</span>
-            </div>
-            <div class="ts-main-center">
-                <span>转眼夏至，这一年已过去一半，正值夏天，闷热、阵雨、烈日似乎是个不太好的季节
-                    却也有人喜欢夏天的激情，阳光、海滩、冷饮，激情的夏日，一切活动仿如充满的干劲...
-                </span>
-            </div>
-        </router-link>
-        <router-link class="ts-main" to="./teaStateInside">
-            <div class="ts-main-head">
-                <span>这份小确信，您想要么</span>
-            </div>
-            <div class="ts-main-center">
-                <span>转眼夏至，这一年已过去一半，正值夏天，闷热、阵雨、烈日似乎是个不太好的季节
-                    却也有人喜欢夏天的激情，阳光、海滩、冷饮，激情的夏日，一切活动仿如充满的干劲...
-                </span>
-            </div>
-        </router-link>
-        <router-link class="ts-main" to="./teaStateInside">
-            <div class="ts-main-head">
-                <span>这份小确信，您想要么</span>
-            </div>
-            <div class="ts-main-center">
-                <span>转眼夏至，这一年已过去一半，正值夏天，闷热、阵雨、烈日似乎是个不太好的季节
-                    却也有人喜欢夏天的激情，阳光、海滩、冷饮，激情的夏日，一切活动仿如充满的干劲...
-                </span>
-            </div>
-        </router-link>
-        <router-link class="ts-main" to="./teaStateInside">
-            <div class="ts-main-head">
-                <span>这份小确信，您想要么</span>
-            </div>
-            <div class="ts-main-center">
-                <span>转眼夏至，这一年已过去一半，正值夏天，闷热、阵雨、烈日似乎是个不太好的季节
-                    却也有人喜欢夏天的激情，阳光、海滩、冷饮，激情的夏日，一切活动仿如充满的干劲...
-                </span>
-            </div>
-        </router-link>
+        <div class="ts-main" v-for="(item,key) in items" :key="key">
+            <router-link :to="{path:'./teaStateInside',query: {id: item.id}}">
+                <div class="ts-main-center-right">
+                    <div class="ts-main-head"><span v-html="item.title"></span></div>
+                    <div class="ts-main-content"><span>{{item.content}}</span></div>
+                </div>
+            </router-link>
+        </div>
     </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+        items: [],
+        currentPage:1,
+        totalCount:0,
+        pageSize:4
+    };
+  },
+  created: function() {
+    this.request();
+  },
+    methods: {
+        currentPageChanged(val) {
+          this.currentPage = val;
+              this.request();
+        console.log(`当前页: ${val}`);
+      },
+      request() {
+           var that = this;
+            this.$ajax.get('/getPosts', {
+                params: {
+                    page:this.currentPage,
+                    pageSize:this.pageSize
+                }
+            })
+        .then(function (response) {
+        console.log(response.data);
+        that.items = response.data.model.posts;
+        })
+        .catch(function (response) {
+        console.log(response);
+        });
+    }
+    }
+}
+</script>
 
 <style>
 a{
@@ -58,25 +65,31 @@ a{
     flex-direction: column;
     align-items: center;
     height: 120px;
-    width: 90%;
+    width: 80%;
     margin-top: 30px;
     border-style: dotted;
     border-color: #9dc135;
 }
 .ts-main-head{
     background-color: #9dc135;
-    height: 30px;
-    width: 40%;
+    width: auto;
     text-align: center;
     border-radius: 5px;
-    margin-left: -65%;
-    margin-top: -2%;
     color: white;
+    height: auto;
+    max-width: 200px;
+    margin-left: -20px;
+    margin-top: -10px;
 }
-.ts-main-center{
+.ts-main-content{
     margin-top: 20px;
     font-size: 10px;
-    width: 80%;
     color: #626262;
+    font-size:12px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width: auto;
+    max-width: 300px;
 }
 </style>
