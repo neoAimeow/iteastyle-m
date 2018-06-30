@@ -1,8 +1,8 @@
 <template>
     <div class="cu-container">
         <div class="cu-title">
-            <span>OUR STORY</span>
-            <img src="http://pa74otoy6.bkt.clouddn.com/plus.png" alt="">
+            <span style="font-family:Times New Roman;">OUR STORY</span>
+            <img src="http://pa74otoy6.bkt.clouddn.com/plus-wap.png" alt="">
             <span>杭式下午茶</span>
         </div>
         <div class="cu-content">
@@ -14,23 +14,23 @@
             </div>
         </div>
         <div class="cu-title">
-            <span>CONTACT US</span>
-            <img src="http://pa74otoy6.bkt.clouddn.com/plus.png" alt="">
+            <span style="font-family:Times New Roman;">CONTACT US</span>
+            <img src="http://pa74otoy6.bkt.clouddn.com/plus-wap.png" alt="">
             <span>联系我们</span>
         </div>
         <div class="cu-content">
+            <span style="margin-bottom:20px;margin-left:-40px;">{{info.contactUsTitle}}</span>
             <div class="cu-content-title">
-                <span>杭式下午茶 创意茶歇 健康食尚</span>
-                <span style="margin-top:20px;">杭州执贝科技有限公司</span>
-                <span>地址：杭州民和路525号三宏国际8楼</span>
-                <span>电话：(86)0571-83731743</span>
-                <span>手机：159-0663-1121</span>
-                <span>邮箱：iteastyle@126.com</span>
-                <span>网址：https://www.iteastyle.cn</span>
+                <span>{{info.companyName}}</span>
+                <span>地址：{{info.companyAddress}}</span>
+                <span>电话：{{info.telephoneNumber}}</span>
+                <span>手机：{{info.phoneNumber}}</span>
+                <span>邮箱：{{info.mailAddress}}</span>
+                <span>网址：{{info.siteAddress}}</span>
             </div>
             <div class="cu-content-QR">
-                <img style="margin-right:80px;" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
-                <img src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
+                <img style="margin-right:80px;border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
+                <img style="border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
             </div>
             <div class="cu-content-map">
                 <el-amap class="cu-content-map-style" vid="amapDemo" :zoom="zoom" :center="center">
@@ -72,6 +72,8 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #eeebeb;
+    margin-top: 20px;
 }
 .cu-title{
     border-style: dotted;
@@ -90,7 +92,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin-top: 40px;
 }
 .cu-content-style{
@@ -102,7 +103,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 40px;
 }
 .cu-content-QR{
     margin-top: 40px;
