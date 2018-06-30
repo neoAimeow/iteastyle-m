@@ -77,7 +77,7 @@ export default {
         })
         .then(function (response) {
         console.log(response);
-        that.conpanyInfo = response.data.model;
+        that.companyInfo = response.data.model;
         })
         .catch(function (response) {
         console.log(response);
