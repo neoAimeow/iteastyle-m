@@ -7,10 +7,7 @@
         </div>
         <div class="cu-content">
             <div class="cu-content-style">
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;杭州执贝科技有限公司旗下品牌【杭式下午茶】是效力于茶歇（TEA BREAK）
-                    一站式的综合服务机构，真正以茶元素为核心，用纯天然的超微茶粉，将茶与饮品、茶与糕点
-                    、茶与时尚有机的结合在一起，旨在引领一种健康的生活方式与生活理念！
-                </span>
+                <span>{{companyInfo.storyContent}}</span>
             </div>
         </div>
         <div class="cu-title">
@@ -19,14 +16,14 @@
             <span>联系我们</span>
         </div>
         <div class="cu-content">
-            <span style="margin-bottom:20px;margin-left:-40px;">{{info.contactUsTitle}}</span>
+            <span style="margin-bottom:20px;margin-left:-40px;">{{contactUsInfo.contactUsTitle}}</span>
             <div class="cu-content-title">
-                <span>{{info.companyName}}</span>
-                <span>地址：{{info.companyAddress}}</span>
-                <span>电话：{{info.telephoneNumber}}</span>
-                <span>手机：{{info.phoneNumber}}</span>
-                <span>邮箱：{{info.mailAddress}}</span>
-                <span>网址：{{info.siteAddress}}</span>
+                <span>{{contactUsInfo.companyName}}</span>
+                <span>地址：{{contactUsInfo.companyAddress}}</span>
+                <span>电话：{{contactUsInfo.telephoneNumber}}</span>
+                <span>手机：{{contactUsInfo.phoneNumber}}</span>
+                <span>邮箱：{{contactUsInfo.mailAddress}}</span>
+                <span>网址：{{contactUsInfo.siteAddress}}</span>
             </div>
             <div class="cu-content-QR">
                 <img style="margin-right:80px;border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
@@ -45,7 +42,7 @@
 export default {
   data() {
     return {
-      conpanyInfo:{},
+      companyInfo:{},
       contactUsInfo:{},
       center: [0,0],
       zoom:14
