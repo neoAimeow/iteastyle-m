@@ -6,11 +6,13 @@
         <img class="home-head-bgimg2" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
       </div>
       <div class="home-head-menu">
-        <div class="home-head-icon" v-for="(data,key) in menu" :key="key" :label="key">
-          <span v-html="data.icon"></span>
+        <div class="home-head-icon">
+          <div style="font-size:35px;" v-for="(data,key) in menu" :key="key" :label="key">
+            <span v-html="data.icon"></span>
+          </div>
         </div>
         <div class="home-head-list">
-        <div style="margin-left:10px;"  v-for="(data,key) in menu" :key="key" :label="key" >
+        <div style="margin-left:15px;"  v-for="(data,key) in menu" :key="key" :label="key" >
           <router-link :index="data.title" :to="data.path">
             {{data.title}}
           </router-link>
@@ -89,11 +91,19 @@ body,
 .home-head-menu{
   width: 100%;
 }
+.router-link-active{
+  color: #9dc135;
+  background-color: white;
+}
 .home-head-list{
-  min-width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+}
+.home-head-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .home-foot{
   display: flex;
