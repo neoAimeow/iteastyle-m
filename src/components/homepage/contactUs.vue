@@ -49,7 +49,6 @@ export default {
     }
   },
   created: function() {
-    var that = this;
 
     this.contactUsRequest();
     this.companyRequest();
@@ -57,30 +56,32 @@ export default {
   },
   methods:  {
       contactUsRequest: function() {
+    var that = this;
 
         this.$ajax.get('/contactUsData', {
 
         })
         .then(function (response) {
-        console.log(response);
-        that.contactUsInfo = response.data.model;
-        that.center = [response.data.model.longitude , response.data.model.latitude]
+            console.log(response);
+            that.contactUsInfo = response.data.model;
+            that.center = [response.data.model.longitude , response.data.model.latitude];
         })
         .catch(function (response) {
         console.log(response);
         });
       },
     companyRequest: function() {
+    var that = this;
 
         this.$ajax.get('/companyStory', {
 
         })
         .then(function (response) {
-        console.log(response);
-        that.companyInfo = response.data.model;
+            console.log(response);
+            that.companyInfo = response.data.model;
         })
         .catch(function (response) {
-        console.log(response);
+            console.log(response);
         });
       }
   }
