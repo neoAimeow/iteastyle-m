@@ -7,7 +7,7 @@
       </div>
       <div class="home-head-menu">
         <div class="home-head-icon" v-for="(data,key) in menu" :key="key" :label="key">
-          <span>{{data.icon}}</span>
+          <span v-html="data.icon"></span>
         </div>
         <div class="home-head-list">
         <div style="margin-left:10px;"  v-for="(data,key) in menu" :key="key" :label="key" >
