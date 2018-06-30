@@ -45,27 +45,47 @@
 export default {
   data() {
     return {
-      info:{},
+      conpanyInfo:{},
+      contactUsInfo:{},
       center: [0,0],
       zoom:14
     }
   },
   created: function() {
     var that = this;
-     this.$ajax.get('/contactUsData', {
 
-    })
-    this.$ajax.get('/companyStory', {
+    this.contactUsRequest();
+    this.companyRequest();
 
-    })
-    .then(function (response) {
-      console.log(response);
-      that.info = response.data.model;
-      that.center = [response.data.model.longitude , response.data.model.latitude]
-    })
-    .catch(function (response) {
-      console.log(response);
-    });
+  },
+  methods:  {
+      contactUsRequest: function() {
+
+        this.$ajax.get('/contactUsData', {
+
+        })
+        .then(function (response) {
+        console.log(response);
+        that.contactUsInfo = response.data.model;
+        that.center = [response.data.model.longitude , response.data.model.latitude]
+        })
+        .catch(function (response) {
+        console.log(response);
+        });
+      },
+    companyRequest: function() {
+
+        this.$ajax.get('/companyStory', {
+
+        })
+        .then(function (response) {
+        console.log(response);
+        that.conpanyInfo = response.data.model;
+        })
+        .catch(function (response) {
+        console.log(response);
+        });
+      }
   }
 }
 </script>
