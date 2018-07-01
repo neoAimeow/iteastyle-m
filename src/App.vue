@@ -12,11 +12,11 @@
           </div>
         </div>
         <div class="home-head-list">
-        <div style="margin-left:15px;"  v-for="(data,key) in menu" :key="key" :label="key" >
-          <router-link :index="data.title" :to="data.path">
-            {{data.title}}
-          </router-link>
-        </div>
+          <div style="margin-left:15px;"  v-for="(data,key) in menu" :key="key" :label="key" >
+            <router-link :index="data.title" :to="data.path">
+              {{data.title}}
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -99,6 +99,7 @@ body,
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 13px;
 }
 .home-head-icon{
   display: flex;
@@ -118,18 +119,18 @@ body,
   flex-direction: row;
   align-items: center;
 }
-.home-foot-left-logo{
- 
-}
 .home-foot-left-order{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 13px;
+  margin-left: 10px;
 }
 .home-foot-right{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  font-size: 13px;
 }
 </style>

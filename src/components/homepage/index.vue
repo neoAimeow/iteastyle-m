@@ -17,10 +17,8 @@
         </div>
         <div class="index-main">
             <div v-for="(item2,key) in items.serviceImages" :key="key">
-              <div class="index-main-title">
-                <span style="font-family:Times New Roman;">茶歇服务</span>
-              </div>
-              <div><progressive-img class="index-main-img" :src="item2" /></div>
+                <div style="display:flex;flex-dirction:column;justify-content:center;"><span  class="index-main-title">茶歇服务</span></div>
+              <div style="display:flex;flex-dirction:column;justify-content:center;"><progressive-img class="index-main-img" :src="item2" /></div>
             </div>
         </div>
     </div>
@@ -85,7 +83,7 @@ span {
     font-family: iconfont;
 }
 .index-container{
-
+  width: 100%;
 }
 .index-head-logo{
     display: flex;
@@ -99,14 +97,9 @@ span {
     flex-direction: row;
     align-items: center;
 }
-.index-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
 .index-main-img{
     margin-top: 20px;
+    width: 80%;
 }
 .index-main-title{
     border-style: dotted;
@@ -115,9 +108,9 @@ span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
     width: 150px;
     height: 80px;
-    margin-top: 40px;
-    background-color: red;
+    font-family:Times New Roman;
 }
 </style>

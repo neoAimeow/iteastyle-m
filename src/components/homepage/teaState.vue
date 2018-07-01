@@ -58,7 +58,8 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 650px;
+    height: auto;
+    max-height: 650px;
 }
 .ts-main{
     display: flex;
@@ -78,7 +79,7 @@ a{
     color: white;
     height: auto;
     max-width: 200px;
-    margin-left: -20px;
+    margin-left: -40px;
     margin-top: -10px;
 }
 .ts-main-content{
@@ -90,6 +91,6 @@ a{
     overflow:hidden;
     text-overflow:ellipsis;
     width: auto;
-    max-width: 300px;
+    max-width: 200px;
 }
 </style>
