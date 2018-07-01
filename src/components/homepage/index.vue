@@ -109,7 +109,7 @@ span {
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-    width: 150px;
+    width: 30%;
     height: 80px;
     font-family:Times New Roman;
 }
