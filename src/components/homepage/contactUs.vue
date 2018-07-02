@@ -16,7 +16,7 @@
             <span>联系我们</span>
         </div>
         <div class="cu-content">
-            <span style="margin-bottom:20px;margin-left:-40px;">{{contactUsInfo.contactUsTitle}}</span>
+            <span style="margin-bottom:20px;letter-spacing:1.3px;">{{contactUsInfo.contactUsTitle}}</span>
             <div class="cu-content-title">
                 <span>{{contactUsInfo.companyName}}</span>
                 <span>地址：{{contactUsInfo.companyAddress}}</span>
@@ -26,7 +26,7 @@
                 <span>网址：{{contactUsInfo.siteAddress}}</span>
             </div>
             <div class="cu-content-QR">
-                <img style="margin-right:80px;border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
+                <img style="margin-right:55px;border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
                 <img style="border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
             </div>
             <div class="cu-content-map">
@@ -94,11 +94,12 @@ export default {
     flex-direction: column;
     align-items: center;
     background-color: #eeebeb;
-    margin-top: 20px;
+    width: 90%;
+    margin: 0 auto;
 }
 .cu-title{
     border-style: dotted;
-    border-color: #9dc135;
+    border-color: #bebebe;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,6 +127,8 @@ export default {
     align-items: flex-start;
 }
 .cu-content-QR{
+    display: flex;
+    flex-direction: row;
     margin-top: 40px;
 }
 .cu-content-map{
@@ -134,7 +137,7 @@ export default {
     margin-bottom: 40px;
 }
 .cu-content-map-style{
-    width: 300px;
+    width: 250px;
     border: 5px solid rgba(157,193,53,0.6);
 }
 </style>

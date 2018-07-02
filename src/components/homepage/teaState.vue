@@ -67,7 +67,6 @@ a{
     align-items: center;
     height: 100px;
     width: 80%;
-    margin-top: 30px;
     border-style: dotted;
     border-color: #9dc135;
 }

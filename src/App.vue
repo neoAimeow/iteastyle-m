@@ -72,6 +72,9 @@ body,
   margin: 0;
   padding: 0;
 }
+.home-head{
+  margin-bottom: 20px;
+}
 .home-head-bgimg{
   display: flex;
   justify-content: center;
