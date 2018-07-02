@@ -24,7 +24,7 @@
     <div class="home-foot">
       <div class="home-foot-left">
         <div class="home-foot-left-logo">
-          <img style="height: 50px;width: 50px;" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
+          <img style="height: 40px;width: 40px;" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
         </div>
         <div class="home-foot-left-order">
           <span>全国订购电话</span>
@@ -125,6 +125,9 @@ body,
   justify-content: center;
   font-size: 13px;
   margin-left: 10px;
+}
+.home-foot-left-logo{
+  margin-left: 5px;
 }
 .home-foot-right{
   display: flex;

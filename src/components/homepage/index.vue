@@ -16,10 +16,43 @@
             </div>
         </div>
         <div class="index-main">
-            <div v-for="(item2,key) in items.serviceImages" :key="key">
+          <div class="index-main-title">
+            <span style="font-size:45px;">&#xe654;</span>
+            <div class="index-main-stitle">
+              <span style="font-size:20px;letter-spacing:10px;">茶歇服务</span>
+              <span style="font-size:10px;">TEA BREAK SERVICE</span>
+            </div>
+          </div>
+          <span style="font-size:30px;margin-top:10px;color:#9c9c9b;">&#xe64a;</span>
+          <div class="index-main-img">
+            <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20break%20service-wap.png" />
+          </div>
+          <div class="index-main-title">
+            <span style="font-size:40px;">&#xe654;</span>
+            <div class="index-main-stitle">
+              <span style="font-size:20px;letter-spacing:7px;">茶礼服务</span>
+              <span style="font-size:10px;">TEA GIFT SERVICE</span>
+            </div>
+          </div>
+          <span style="font-size:30px;margin-top:10px;color:#9c9c9b;">&#xe64a;</span>
+          <div class="index-main-img">
+            <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20gift%20service-wap.png" />
+          </div>
+          <div class="index-main-title">
+            <span style="font-size:40px;">&#xe654;</span>
+            <div class="index-main-stitle">
+              <span style="font-size:20px;letter-spacing:7px;">茶艺服务</span>
+              <span style="font-size:10px;">TEA ART SERVICE</span>
+            </div>
+          </div>
+          <span style="font-size:30px;margin-top:10px;color:#9c9c9b;">&#xe64a;</span>
+          <div class="index-main-img">
+            <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20art%20service-wap.png" />
+          </div>
+            <!-- <div v-for="(item2,key) in items.serviceImages" :key="key">
                 <div style="display:flex;flex-dirction:column;justify-content:center;"><span  class="index-main-title">茶歇服务</span></div>
               <div style="display:flex;flex-dirction:column;justify-content:center;"><progressive-img class="index-main-img" :src="item2" /></div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -99,20 +132,32 @@ span {
     flex-direction: row;
     align-items: center;
 }
+.index-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .index-main-img{
-    margin-top: 20px;
-    width: 80%;
+    margin-top: 10px;
+    width: 100%;
 }
 .index-main-title{
     border-style: dotted;
-    border-color: #dedfdc;
+    border-color: #9c9c9b;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-    width: 30%;
     height: 80px;
+    width: 40%;
+    min-width: 200px;
     font-family:Times New Roman;
+    color: #7e7e7c;
+}
+.index-main-stitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
