@@ -159,5 +159,6 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 10px;
 }
 </style>

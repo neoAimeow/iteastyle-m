@@ -2,8 +2,8 @@
     <div class="ts-container">
         <div class="ts-main" v-for="(item,key) in items" :key="key">
             <router-link :to="{path:'./teaStateInside',query: {id: item.id}}">
-                <div class="ts-main-center-right">
-                    <div class="ts-main-head"><span v-html="item.title"></span></div>
+                <div class="ts-main-center">
+                    <div class="ts-main-head"><span>{{item.title}}</span></div>
                     <div class="ts-main-content"><span>{{item.content}}</span></div>
                 </div>
             </router-link>
@@ -65,7 +65,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 120px;
+    height: 100px;
     width: 80%;
     margin-top: 30px;
     border-style: dotted;
@@ -77,10 +77,11 @@ a{
     text-align: center;
     border-radius: 5px;
     color: white;
-    height: auto;
-    max-width: 200px;
+    max-width: 140px;
     margin-left: -40px;
     margin-top: -10px;
+    font-size: 13px;
+    padding: 5px;
 }
 .ts-main-content{
     margin-top: 20px;
@@ -92,5 +93,6 @@ a{
     text-overflow:ellipsis;
     width: auto;
     max-width: 200px;
+    text-align: center;
 }
 </style>
