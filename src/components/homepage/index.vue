@@ -89,8 +89,10 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #9dc135;
     color: white;
+    height: 100px;
 }
 .index-head-logo-font{
     display: flex;
@@ -103,7 +105,7 @@ span {
 }
 .index-main-title{
     border-style: dotted;
-    border-color: #9dc135;
+    border-color: #dedfdc;
     display: flex;
     flex-direction: column;
     align-items: center;
