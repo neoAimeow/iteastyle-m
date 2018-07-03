@@ -94,9 +94,11 @@ body,
 .home-head-menu{
   width: 100%;
 }
-.router-link-active{
+a.router-link-active, li.router-link-active a {
   color: #9dc135;
-  background-color: white;
+}
+a.router-link-exact-active, li.router-link-exact-active a {
+  border-bottom: 1px solid #9dc135;
 }
 .home-head-list{
   display: flex;
