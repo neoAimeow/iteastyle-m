@@ -118,6 +118,7 @@ body,
   background-color: #dad6d6;
   border:none;
   border-top:2px solid #9dc135;
+  color: #797978;
 }
 .home-foot-left{
   display: flex;
