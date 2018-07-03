@@ -69,6 +69,7 @@ a{
     width: 80%;
     border-style: dotted;
     border-color: #9dc135;
+    margin-top: 20px;
 }
 .ts-main-head{
     background-color: #9dc135;

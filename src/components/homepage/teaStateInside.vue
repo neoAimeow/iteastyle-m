@@ -4,7 +4,7 @@
         <div class="tsI-main">
             <div class="tsI-main-head">
                 <span>{{title}}</span>
-                <hr style="height:0.2px;border:none;border-top:1px solid #a7a7a7; width: 800px;" />
+                <hr style="height:0.2px;border:none;border-top:1px solid #a7a7a7;width:190px;" />
                 <span style="font-size:5px;color:#626262;">发布时间： {{ gmtModified | moment("YYYY-MM-DD HH:mm")  }}  </span>
             </div>
             <div class="tsI-main-body">
@@ -48,15 +48,14 @@ created: function() {
 
 <style lang="scss" scoped>
 .tsI-container{
-    //height: 900px;
-    border-bottom:2px solid #9dc135;
-    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .tsI-head{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 200px;
 }
 .tsI-head-bgimg{
     height: 200px;
@@ -70,13 +69,19 @@ created: function() {
     width: 100px;
     margin-top: 50px;
 }
+.tsI-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
 .tsI-main-head{
     margin-top: 20px;
     text-align: center;
 }
 .tsI-main-body{
     //height: 600px;
-    width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -87,8 +92,12 @@ created: function() {
     margin-bottom: 40px;
 }
 .tsI-main-body-content{
-    width: 700px;
     font-size: 10px;
     letter-spacing:3px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 </style>
