@@ -5,7 +5,7 @@ const menus = [{
 },
 {
     title: '产品展示',
-    path: '/homepage/productDisplay',
+    path: '/homepage/productDisplayUpgrade',//暂时修改这个路径
     icon: '&#xe60e;'
 },
 {

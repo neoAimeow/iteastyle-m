@@ -11,6 +11,7 @@ import ProductInside from '@/components/homepage/productInside.vue'
 import TeaStateInside from '@/components/homepage/teaStateInside.vue'
 import ClassicCaseInside1 from '@/components/homepage/classicCaseInside1.vue'
 import ClassicCaseInside2 from '@/components/homepage/classicCaseInside2.vue'
+import ProductDisplayUpgrade from '@/components/homepage/productDisplayUpgrade.vue'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ export default new Router({
       path: '/homepage/classicCaseInside2',
       name: 'classicCaseInside2',
       component: ClassicCaseInside2
+    },
+    {
+      path: '/homepage/productDisplayUpgrade',
+      name: 'productDisplayUpgrade',
+      component: ProductDisplayUpgrade
     }
   ]
 })
