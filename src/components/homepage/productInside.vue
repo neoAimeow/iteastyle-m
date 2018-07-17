@@ -73,7 +73,7 @@ created: function() {
     align-items: center;
     // border-bottom:2px solid #9dc135;
     width:100%;
-    background-color: aqua;
+    // background-color: aqua;
 
 }
 
@@ -88,7 +88,7 @@ created: function() {
     flex-wrap:wrap;
     justify-content:center;
     // align-items: center; 
-    background-color: red; 
+    // background-color: red; 
     margin-bottom: 20px; 
    
     // margin-top:40px; 
@@ -102,7 +102,7 @@ created: function() {
     width:130px;
     height: 90px;
     margin:10px;
-    background-color: yellow;
+    // background-color: yellow;
     
 
 }
