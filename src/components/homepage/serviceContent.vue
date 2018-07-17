@@ -11,6 +11,8 @@
         </div>
     </router-link>
 
+    <div class="hr"></div>
+
     <router-link :to="{path:'/service/performance'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
@@ -20,6 +22,8 @@
             </div>
         </div>
     </router-link>
+
+    <div class="hr"></div>
 
     <router-link :to="{path:'/service/diyActivites'}">
         <div class="service-name">
@@ -31,6 +35,8 @@
         </div>
     </router-link>
 
+    <div class="hr"></div>
+
     <router-link :to="{path:'/service/seminar'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
@@ -41,6 +47,8 @@
         </div>
     </router-link>
 
+    <div class="hr"></div>
+
     <router-link :to="{path:'/service/souvenir'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
@@ -50,6 +58,7 @@
             </div>
         </div>
     </router-link>  
+
 
 </div>
 </template>
@@ -76,8 +85,9 @@
         border:1.3px dotted #9dc135;
         display:flex;
         align-items: center;
-        margin-top:30px;
+        margin-top:20px;
         box-shadow: 0px 0px 10px 0px #e0e0e0;
+        border-radius: 3px;
     }
 
     .logo{
@@ -106,5 +116,10 @@
         font-size:10px;
         line-height: 0.8;
     }
-     
+    
+    .hr{
+        border:0.5px solid #f0f0f0;
+        width: 90%;
+        margin-top:20px;
+    }
 </style>
