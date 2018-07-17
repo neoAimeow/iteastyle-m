@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  web:
+    image: nginx
+    container_name: iteastyle-m-test
+    restart: always
+    volumes:
+     - /root/service/iteastyle-m-test:/usr/share/nginx/html:ro
+    expose:
+     - "443"
+    environment:
+      VIRTUAL_HOST: iteastyle-m.aimeow.com
+      VIRTUAL_PORT: 80
+      LETSENCRYPT_HOST: iteastyle-m.aimeow.com
+      LETSENCRYPT_EMAIL: a18814888787@gmail.com
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
