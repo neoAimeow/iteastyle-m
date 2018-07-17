@@ -532,6 +532,7 @@ export default {
 .ways-top {
   display: flex;
   flex-direction: row;
+  margin-left: 5%;
 }
 
 .ways-top > span {
@@ -542,36 +543,37 @@ export default {
 .ways-bottom {
   border: 2px solid #9dc135;
   width:90%;
-  height: 200px;
+  height: 150px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  background-color: aqua;
+  margin-left: 5%;
+  /* background-color: aqua; */
 }
 
 .ways-bottom-left {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 
 .ways-bottom-mid {
   border: 1px solid #9dc135;
   height: 100px;
-  margin: 0 60px;
+  margin: 0 20px;
 }
 
 .ways-bottom-right {
   color: #9dc135;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  /* font-size: 18px; */
   text-align: center;
 }
 
 .fingerprint {
-  font-size: 120px;
+  font-size: 100px;
 }
 
 .order-ways {
@@ -583,6 +585,7 @@ export default {
 .ways-ct {
   margin-top: 40px;
   margin-bottom: 100px;
-  background-color: blue;
+  width:100%;
+  /* background-color: blue; */
 }
 </style>
