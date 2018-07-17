@@ -2,10 +2,10 @@
 <div class="souvenir">
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:35px;">{{items.souvenir.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:37px;width:100px;">{{items.souvenir.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:5px;left:35px;font-size:10px;">{{items.souvenir.title_en}}</span>
+      <span style="position: relative;top:5px;left:37px;font-size:10px;width:100px;">{{items.souvenir.title_en}}</span>
       <div class="souvenir-main-title-en"></div>
     </div>
     <div class="souvenir-main-souvenir">
@@ -15,10 +15,10 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:35px;">{{items.way.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:37px;width:100px;">{{items.way.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:5px;left:35px;font-size:10px;">{{items.way.title_en}}</span>
+      <span style="position: relative;top:5px;left:37px;font-size:10px;width:100px;">{{items.way.title_en}}</span>
       <div class="souvenir-main-title-en"></div>
     </div>
       <div class="souvenir-main-drink">
@@ -40,32 +40,32 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:35px;">{{items.souvenir.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:37px;width:100px;">{{items.souvenir.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:5px;left:35px;font-size:10px;">{{items.souvenir.title_en}}</span>
+      <span style="position: relative;top:5px;left:37px;font-size:10px;width:100px;">{{items.souvenir.title_en}}</span>
       <div class="souvenir-main-title-en"></div>
     </div>
     <div class="souvenir-main-gift">
       <div class="souvenir-main-gitf-category" v-for="(info2 , key2) in items.mind.minds" :key="key2">
         <div class="souvenir-main-gitf-list">
-          <el-table :data="info2.elements" stripe style="width: 250px;font-size:10px;">
-            <el-table-column prop="number" label="编号" width="50">
+          <el-table :data="info2.elements" stripe style="width: 300px;font-size:10px;">
+            <el-table-column prop="number" label="编号" width="60">
             </el-table-column>
-            <el-table-column prop="elementName" label="品名" width="50">
+            <el-table-column prop="elementName" label="品名" width="60">
             </el-table-column>
-            <el-table-column prop="wrap" label="包装" width="50">
+            <el-table-column prop="wrap" label="包装" width="60">
             </el-table-column>
-            <el-table-column prop="size" label="规格" width="50">
+            <el-table-column prop="size" label="规格" width="60">
             </el-table-column>
-            <el-table-column prop="price" label="价格（RMB）">
+            <el-table-column prop="price" label="价格（RMB）" width="59">
             </el-table-column>
           </el-table>
         </div>
         <div class="souvenir-main-gitf-introduce">
           <div class="gitf-introduce">
             <div class="gitf-introduce-title">
-              <img :src="info2.itemImageUrl" alt="" />
+              <img :src="info2.itemImageUrl" alt="" style="width:250px;"/>
               <span style="color:#9dc135;font-size:18px;">- {{info2.itemTitle}} - -</span>
             </div>
             <div class="gitf-introduce-content">
@@ -117,7 +117,11 @@ export default {
   align-items: center;
 }
 .souvenir-main{
-  width: 250px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .souvenir-main-title{
   width: 250px;
@@ -126,7 +130,7 @@ export default {
   color: white;
 }
 .souvenir-main-title-hr{
-  width: 250px;
+  width: 260px;
   height: 1px;
   border: none;
   border-top: 2px solid #9dc135;
@@ -144,6 +148,11 @@ export default {
     border-top: 30px solid #9dc135;
     border-right: 30px solid transparent;
     border-left: 30px solid transparent;
+}
+.souvenir-main-souvenir{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .souvenir-main-souvenir-img{
   width: 250px;
@@ -175,4 +184,5 @@ export default {
 .souvenir-main-drink-content{
   margin-left: 40px;
 }
+
 </style>
