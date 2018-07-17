@@ -69,17 +69,13 @@
         
         <div class="service-ct">
             <div class="service-border" v-for="(value,key) in responseDatas.range.ranges" :key="key">
-                <div class="service-ct-top">                    
-                    <div class="service-ct-top-left">    
-                        <img class="service-ct-top-no" :src=value.titleImageUrl alt="logo">
-                        <div class="service-e-name">{{value.title_en}}</div>
-                    </div>
-                    <div class="service-c-name">
-                        <span>{{value.mainTitle}}</span>
-                        <span class="s-c-name-bottom">{{value.subTitle}}</span>
-                    </div>
+                <div class="service-ct-top">                                           
+                    <img class="service-ct-top-no" :src=value.titleImageUrl alt="logo">
+                    <span class="service-c-name">{{value.mainTitle}}{{value.subTitle}}</span>
+                    <!-- <span class="s-c-name-bottom">{{value.subTitle}}</span> -->   
                 </div>
-                <img style="width:180px;height:120px;" :src=value.imageUrl alt="service picture">
+                <div class="service-e-name">{{value.title_en}}</div>
+                <!-- <img style="width:130px;height:80px;" :src=value.imageUrl alt="service picture"> -->
             </div>
 
         </div>
@@ -236,6 +232,10 @@ export default {
   height: 30px;
   background-color: #fff;
   margin-top: 20px;
+
+
+
+
 }
 
 .mid-name {
@@ -339,6 +339,7 @@ export default {
   width: 99%;
   border: 2px solid #9dc135;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .menu-border-inside {
   margin: 5px;
@@ -375,6 +376,7 @@ export default {
 .service-ct-top {
   display: flex;
   flex-direction: row;
+  align-items: center;
   /* background-color: yellow; */
   margin-bottom: 5px;
 }
@@ -382,42 +384,48 @@ export default {
 .service-ct-top-no{
   width:30px;
   height:30px;
-  margin-left:5px;
+  margin-left: 5px;
+  /* margin-left:5px; */
 }
 .service-c-name {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-end; */
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   /* background-color: blue; */
   margin-left: 5px;
+  color: #9dc135;
 }
 
 .service-e-name {
   font-size: 10px;
   /* background-color: red; */
-  /* font-style: italic; */
-  width: 130px;
+  font-style: italic;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: right;
+  background-color: #9dc135;
+  color: #fff;
+  text-align: center;
+  /* text-align: right; */
 }
 
 .service-border {
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 10px 0px #e0e0e0;
-  margin-bottom:30px;
+  /* align-items: center; */
+  /* box-shadow: 0px 0px 10px 0px #e0e0e0; */
+  margin-bottom:10px;
+  
 }
 
 .s-c-name-bottom {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .service-ct-top-left {
@@ -427,12 +435,13 @@ export default {
 }
 
 .service-ct {
-  width: 900px;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .order-ct {
