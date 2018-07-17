@@ -23,7 +23,7 @@
               <span style="font-size:10px;">TEA BREAK SERVICE</span>
             </div>
           </div>
-          <span style="font-size:30px;margin-top:10px;color:#9c9c9b;">&#xe64a;</span>
+          <span style="font-size:30px;margin-top:10px;color:#9c9c9c;">&#xe64a;</span>
           <div class="index-main-img">
             <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20break%20service-wap.png" />
           </div>
@@ -34,7 +34,7 @@
               <span style="font-size:10px;">TEA GIFT SERVICE</span>
             </div>
           </div>
-          <span style="font-size:30px;margin-top:10px;color:#9c9c9b;">&#xe64a;</span>
+          <span style="font-size:30px;margin-top:10px;color:#9c9c9c;">&#xe64a;</span>
           <div class="index-main-img">
             <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20gift%20service-wap.png" />
           </div>
@@ -45,7 +45,7 @@
               <span style="font-size:10px;">TEA ART SERVICE</span>
             </div>
           </div>
-          <span style="font-size:30px;margin-top:10px;color:#9c9c9b;">&#xe64a;</span>
+          <span style="font-size:30px;margin-top:10px;color:#9c9c9c;">&#xe64a;</span>
           <div class="index-main-img">
             <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20art%20service-wap.png" />
           </div>
@@ -142,8 +142,7 @@ span {
     width: 100%;
 }
 .index-main-title{
-    border-style: dotted;
-    border-color: #9c9c9b;
+    border: 1.3px dotted #9c9c9c;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -153,7 +152,7 @@ span {
     width: 40%;
     min-width: 200px;
     font-family:Times New Roman;
-    color: #7e7e7c;
+    color: #9c9c9c;
 }
 .index-main-stitle{
   display: flex;

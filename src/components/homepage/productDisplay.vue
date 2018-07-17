@@ -97,7 +97,7 @@ export default {
     .case-name{
         width:250px;
         height:60px;        
-        border:1px dotted #9dc135;
+        border:1.3px dotted #9dc135;
         display:flex;
         flex-direction: row;
         justify-content: center;

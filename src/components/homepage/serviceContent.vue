@@ -1,7 +1,7 @@
 <template>
 <div class="serviceContent">
 
-   
+    <router-link :to="{path:'/service/performance'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
             <div class="title">
@@ -9,9 +9,9 @@
                 <span class="E-title">TEA BREAK SERVICE</span>
             </div>
         </div>
-    
+    </router-link>
 
-
+    <router-link :to="{path:'/service/performance'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
             <div class="title">
@@ -19,9 +19,9 @@
                 <span class="E-title">TEA PERFORMANCE</span>
             </div>
         </div>
+    </router-link>
 
-
-
+    <router-link :to="{path:'/service/diyActivites'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
             <div class="title">
@@ -29,9 +29,9 @@
                 <span class="E-title">DIY ACTIVITES</span>
             </div>
         </div>
+    </router-link>
 
-
-
+    <router-link :to="{path:'/service/seminar'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
             <div class="title">
@@ -39,9 +39,9 @@
                 <span class="E-title">TEA CULTURE SEMINAR</span>
             </div>
         </div>
+    </router-link>
 
-
-
+    <router-link :to="{path:'/service/souvenir'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
             <div class="title">
@@ -49,7 +49,7 @@
                 <span class="E-title">TEA SOUVENIR</span>
             </div>
         </div>
-    
+    </router-link>  
 
 </div>
 </template>
@@ -73,16 +73,11 @@
     .service-name{
         width:250px;
         height:60px;       
-        border:1px dotted #9dc135;
+        border:1.3px dotted #9dc135;
         display:flex;
         align-items: center;
         margin-top:30px;
-    }
-
-    .service-name:hover{
         box-shadow: 0px 0px 10px 0px #e0e0e0;
-        /* background-color: #9dc135;
-        color:#fff; */
     }
 
     .logo{

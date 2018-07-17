@@ -67,8 +67,7 @@ a{
     align-items: center;
     height: 100px;
     width: 80%;
-    border-style: dotted;
-    border-color: #9dc135;
+    border: 1.5px dotted #9dc135;
     margin-top: 20px;
 }
 .ts-main-head{

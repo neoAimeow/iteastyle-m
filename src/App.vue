@@ -117,10 +117,10 @@ a.router-link-exact-active, li.router-link-exact-active a {
   justify-content: space-around;
   margin-top: 20px;
   height: 150px;
-  background-color: #dad6d6;
+  background-color: #f2f2f2;
   border:none;
   border-top:2px solid #9dc135;
-  color: #797978;
+  color: #797979;
 }
 .home-foot-left{
   display: flex;
