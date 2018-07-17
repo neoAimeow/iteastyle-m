@@ -10,9 +10,9 @@ import ContactUs from '@/components/homepage/contactUs.vue'
 import ProductInside from '@/components/homepage/productInside.vue'
 import TeaStateInside from '@/components/homepage/teaStateInside.vue'
 import DiyActivites from '@/components/service/diyActivites.vue'
-import Performanec from '@/components/service/performance.vue'
+import Performance from '@/components/service/performance.vue'
 import Seminar from '@/components/service/seminar.vue'
-import Souvvenir from '@/components/service/souvenir.vue'
+import Souvenir from '@/components/service/souvenir.vue'
 import TeaBreakService from '@/components/service/teaBreakService.vue'
 
 Vue.use(Router)
