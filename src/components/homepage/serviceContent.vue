@@ -1,7 +1,7 @@
 <template>
 <div class="serviceContent">
 
-    <router-link :to="{path:'/service/performance'}">
+    <router-link :to="{path:'/service/teaBreakService'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
             <div class="title">

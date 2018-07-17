@@ -10,7 +10,7 @@ import ContactUs from '@/components/homepage/contactUs.vue'
 import ProductInside from '@/components/homepage/productInside.vue'
 import TeaStateInside from '@/components/homepage/teaStateInside.vue'
 import DiyActivites from '@/components/service/diyActivites.vue'
-import Performance from '@/components/service/performance.vue'
+import Performance from '@components/service/performance.vue'
 import Seminar from '@/components/service/seminar.vue'
 import Souvenir from '@/components/service/souvenir.vue'
 import TeaBreakService from '@/components/service/teaBreakService.vue'
@@ -62,7 +62,7 @@ export default new Router({
     {
       path: '/service/performance',
       name: 'performance',
-      component: performance
+      component: Performance
     },
     {
       path: '/service/seminar',
