@@ -47,13 +47,9 @@
                                 <li v-for="(cake,dessert) in food.desserts" :key="dessert">{{cake}}</li>
                             </ul>
                         </div>
-
-                    </div>
-                    
+                    </div>                    
                 </div>
-
             </div>
-
         </div>        
 
         <div class="r-title">
@@ -445,17 +441,18 @@ export default {
 }
 
 .order-ct {
-  width: 200px;
+  width: 150px;
   font-size: 16px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom:30px;
+  margin-bottom:20px;
+  /* background-color: aqua; */
 }
 
 .order-top {
-  width: 152px;
+  width: 120px;
   height: 40px;
   text-align: center;
   background: #9dc135;
@@ -469,19 +466,19 @@ export default {
   border-left: 2px dotted #9dc135;
   border-right: 2px dotted #9dc135;
   border-bottom: 2px dotted #9dc135;
-  width: 128px;
-  height: 70px;
+  width: 96px;
+  height: 90px;
   padding: 10px;
 }
 
 .order-arrow {
   color: #9dc135;
-  margin-left: 25px;
-  font-size: 30px;
+  margin-left: 5px;
+  font-size: 20px;
 }
 
 .order {
-  width: 900px;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -516,7 +513,7 @@ export default {
 
 .in-ct {
   margin-top: 40px;
-  width: 900px;
+  width: 90%;
   /* background-color: aqua; */
 }
 
@@ -544,13 +541,14 @@ export default {
 
 .ways-bottom {
   border: 2px solid #9dc135;
-  width: 500px;
+  width:90%;
   height: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  background-color: aqua;
 }
 
 .ways-bottom-left {
@@ -585,5 +583,6 @@ export default {
 .ways-ct {
   margin-top: 40px;
   margin-bottom: 100px;
+  background-color: blue;
 }
 </style>
