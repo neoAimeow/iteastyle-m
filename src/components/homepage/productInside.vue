@@ -84,7 +84,6 @@ created: function() {
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    border-bottom:2px solid #9dc135;
     width:100%;
 }
 

@@ -66,7 +66,6 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;     
-        border-bottom:2px solid #9dc135;
         width:100%;
 
     }
@@ -97,8 +96,7 @@ export default {
     
     .case-name{
         width:250px;
-        height:60px;
-        
+        height:60px;        
         border:1px dotted #9dc135;
         display:flex;
         flex-direction: row;
@@ -114,10 +112,12 @@ export default {
         flex-direction: column;
         margin-left: 5px;
         height:40px;
+        /* background-color: blue; */
     }
     .C-title{
         font-size: 20px;
-        letter-spacing: 12px;
+        letter-spacing:5px;
+       
    
     }
     .E-title{
