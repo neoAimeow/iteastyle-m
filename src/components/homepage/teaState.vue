@@ -1,5 +1,6 @@
 <template>
     <div class="ts-container">
+        
         <div class="ts-main" v-for="(item,key) in items" :key="key">
             <router-link :to="{path:'./teaStateInside',query: {id: item.id}}">
                 <div class="ts-main-center">

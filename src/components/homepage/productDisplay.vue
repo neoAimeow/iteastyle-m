@@ -1,10 +1,10 @@
 <template>
-<div class="classicCase">
+<div class="productDisplay">
 
 <div v-for="(item,key) in items" :key="key" >
     <router-link :to="{path:'/homepage/productInside', query: {type: item.type}}">
-    <div class="case" >
-        <div class="case-name">
+    <div class="product" >
+        <div class="product-name">
             <img class="logo" :src="item.typeIcon">
             <div class="title">
                 <span class="C-title">{{item.typeName}}</span>
@@ -12,7 +12,7 @@
             </div>
         </div>
         <span class="arrow">&#xe64a;</span>
-        <div class="case-picture">
+        <div class="produtc-picture">
             <img class="picture" :src="item.typeImage">
         </div>
         
@@ -62,14 +62,14 @@ export default {
     text-decoration: none;
 
 }
-    .classicCase{
+    .productDisplay{
         display: flex;
         flex-direction: column;
         align-items: center;     
         width:100%;
 
     }
-    .case{
+    .product{
         width:250px;
         text-align: center;
         margin-bottom: 10px;
@@ -80,7 +80,7 @@ export default {
         font-size: 40px;
         
     }
-    .case-picture{
+    .product-picture{
         width:250px;
         height:400px;
         display: flex;
@@ -94,7 +94,7 @@ export default {
    
     }
     
-    .case-name{
+    .product-name{
         width:250px;
         height:60px;        
         border:1.3px dotted #9dc135;

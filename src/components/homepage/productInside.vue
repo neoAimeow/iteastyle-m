@@ -1,14 +1,13 @@
 <template>
-<div class="classinside-one">
+<div class="proudceInside">
     
-    
-    <div class="case-body">
+    <div class="product-body">
                
         <div v-for="(item,key) in items" :key="key">   
            
             <div class="picture"> 
-               <img class="case-picture" :src="item.imageArr[0]" alt="">
-               <div class="case-title">
+               <img class="product-picture" :src="item.imageArr[0]" alt="">
+               <div class="product-title">
                    <span>{{item.title}}</span>
                </div> 
             </div>  
@@ -16,7 +15,7 @@
         </div>
           
     </div> 
-    <div class="case-foot">
+    <div class="product-foot">
         <el-pagination
             layout="prev, pager, next"
             :total="totalCount" :page-size="pageSize" :current-page="currentPage" @current-change="currentPageChanged"
@@ -77,7 +76,7 @@ created: function() {
 
 
 <style scoped>
-.classinside-one{
+.productInside{
     margin: 0;
     padding: 0;
     display: flex;
@@ -87,12 +86,8 @@ created: function() {
     width:100%;
 }
 
-.nocase{
-    text-align: center;
-    margin-top:50px;
-    color:#626262;
-}
-.case-body{
+
+.product-body{
     width:100%;   
     display: flex;
     flex-wrap:wrap;
@@ -109,13 +104,13 @@ created: function() {
     margin:10px;
 }
 
-.case-picture{
+.product-picture{
     width:130px;
     height: 80px;
     position:absolute;
     z-index: -1;
 }
-.case-title{
+.product-title{
     width:130px;   
     background-color: rgba(174,203,87, 0.83);
     text-align: center;
@@ -127,8 +122,7 @@ created: function() {
     overflow:hidden;
     text-overflow:ellipsis;
 }
-.case-foot{
-    
+.product-foot{    
     
     margin-bottom: 40px;
 
