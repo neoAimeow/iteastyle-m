@@ -1,7 +1,7 @@
 <template>
 <div class="classinside-one">
     
-    <div v-if="items.length==0 && isLoading == false" class="nocase"><span>您访问的服务暂无案例哦！</span></div>
+    
     <div class="case-body">
                
         <div v-for="(item,key) in items" :key="key">   

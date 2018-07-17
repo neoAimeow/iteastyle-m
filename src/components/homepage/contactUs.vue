@@ -1,22 +1,27 @@
 <template>
+
     <div class="cu-container">
+
         <div class="cu-title">
             <span style="font-family:Times New Roman;font-size:23px">OUR STORY</span>
             <img src="http://pa74otoy6.bkt.clouddn.com/plus-wap.png" alt="">
             <span style="letter-spacing:3px;">杭式下午茶</span>
         </div>
-        <div class="cu-content">
-           
-                <span class="cu-content-style">{{companyInfo.storyContent}}</span>
-            
+
+        <div class="cu-content">           
+           <span class="cu-content-style" v-html="companyInfo.storyContent"></span>            
         </div>
+
         <div class="cu-title">
             <span style="font-family:Times New Roman;font-size:23px">CONTACT US</span>
             <img src="http://pa74otoy6.bkt.clouddn.com/plus-wap.png" alt="">
             <span style="letter-spacing:5px;">联系我们</span>
         </div>
+
         <div class="cu-content">
+
             <span style="margin-bottom:20px;letter-spacing:1.5px;">{{contactUsInfo.contactUsTitle}}</span>
+
             <div class="cu-content-title">
                 <span>{{contactUsInfo.companyName}}</span>
                 <span>地址：{{contactUsInfo.companyAddress}}</span>
@@ -30,17 +35,22 @@
                 <span>邮箱：{{contactUsInfo.mailAddress}}</span>
                 <span>网址：{{contactUsInfo.siteAddress}}</span>
             </div>
+
             <div class="cu-content-QR">
-                <img style="margin-right:55px;border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
-                <img style="border: 5px solid rgba(157,193,53,0.6);" src="http://pa74otoy6.bkt.clouddn.com/contactus-QRcode.png" alt="">
+                <img style="margin-right:55px;border: 5px solid rgba(157,193,53,0.6);" :src="contactUsInfo.qrCodeImageUrl" alt="">
+                <img style="border: 5px solid rgba(157,193,53,0.6);" :src="contactUsInfo.customerQrCodeImageUrl" alt="">
             </div>
+
             <div class="cu-content-map">
                 <el-amap class="cu-content-map-style" vid="amapDemo" :zoom="zoom" :center="center">
                     <el-amap-marker :position="center"></el-amap-marker>
                 </el-amap>
             </div>
+
         </div>
+
     </div>
+
 </template>
 
 <script>
