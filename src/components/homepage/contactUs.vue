@@ -134,6 +134,7 @@ export default {
 }
 .cu-content-style{
     font-size:13px;
+    max-width:500px;
 }
 
 .cu-content-title{
