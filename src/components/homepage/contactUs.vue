@@ -1,27 +1,32 @@
 <template>
     <div class="cu-container">
         <div class="cu-title">
-            <span style="font-family:Times New Roman;">OUR STORY</span>
+            <span style="font-family:Times New Roman;font-size:23px">OUR STORY</span>
             <img src="http://pa74otoy6.bkt.clouddn.com/plus-wap.png" alt="">
-            <span>杭式下午茶</span>
+            <span style="letter-spacing:3px;">杭式下午茶</span>
         </div>
         <div class="cu-content">
-            <div class="cu-content-style">
-                <span>{{companyInfo.storyContent}}</span>
-            </div>
+           
+                <span class="cu-content-style">{{companyInfo.storyContent}}</span>
+            
         </div>
         <div class="cu-title">
-            <span style="font-family:Times New Roman;">CONTACT US</span>
+            <span style="font-family:Times New Roman;font-size:23px">CONTACT US</span>
             <img src="http://pa74otoy6.bkt.clouddn.com/plus-wap.png" alt="">
-            <span>联系我们</span>
+            <span style="letter-spacing:5px;">联系我们</span>
         </div>
         <div class="cu-content">
-            <span style="margin-bottom:20px;letter-spacing:1.3px;">{{contactUsInfo.contactUsTitle}}</span>
+            <span style="margin-bottom:20px;letter-spacing:1.5px;">{{contactUsInfo.contactUsTitle}}</span>
             <div class="cu-content-title">
                 <span>{{contactUsInfo.companyName}}</span>
                 <span>地址：{{contactUsInfo.companyAddress}}</span>
                 <span>电话：{{contactUsInfo.telephoneNumber}}</span>
-                <span>手机：{{contactUsInfo.phoneNumber}}</span>
+                <div style="display:flex;flex-direction:row;">
+                  <div>手机：</div>
+                  <div>
+                    <span v-for="(number,key) in contactUsInfo.phoneNumber" :key="key">{{number}}<br></span>
+                  </div>
+                </div>
                 <span>邮箱：{{contactUsInfo.mailAddress}}</span>
                 <span>网址：{{contactUsInfo.siteAddress}}</span>
             </div>
@@ -93,34 +98,34 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eeebeb;
+    background-color: #fafafa;
     width: 90%;
     margin: 0 auto;
+    border-radius: 10px;
+    color:#757575;
 }
 .cu-title{
-    border-style: dotted;
-    border-color: #bebebe;
+    border: 1.5px dotted #757575;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 200px;
     height: 80px;
     margin-top: 40px;
 }
 .cu-content{
-    width: 90%;
-    background-color: #eeebeb;
+    width: 94%;
+    /* background-color: #eeebeb; */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
 }
 .cu-content-style{
-    margin-top: 40px;
-    width: 80%;
-    margin-bottom: 40px
+    font-size:13px;
 }
+
 .cu-content-title{
     display: flex;
     flex-direction: column;
@@ -132,7 +137,7 @@ export default {
     margin-top: 40px;
 }
 .cu-content-map{
-    height: 230px;
+    height: 150px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
