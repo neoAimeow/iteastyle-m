@@ -41,7 +41,7 @@ export default {
             })
         .then(function (response) {
         console.log(response.data);
-        that.items = response.data.model.posts;
+        that.items = response.data.model.items;
         })
         .catch(function (response) {
         console.log(response);
