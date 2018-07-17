@@ -151,7 +151,7 @@ span {
     height: 80px;
     width: 40%;
     min-width: 200px;
-    font-family:Times New Roman;
+    /* font-family:Times New Roman; */
     color: #9c9c9c;
 }
 .index-main-stitle{
