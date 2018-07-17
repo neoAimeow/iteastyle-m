@@ -1,22 +1,22 @@
 <template>
-<div class="performance">
-  <div class="pf-main">
-    <div class="pf-content" v-for="(info1 , key1) in info.items" :key="key1">
-      <silentbox-group>
-        <silentbox-item v-for="(info2 , key2) in info1.imageUrls" :key="key2" :src="info2">
-          <img v-if="key2===0" :src="info2" alt="" class="pf-content-img">
-        </silentbox-item>
-      </silentbox-group>
-      <div class="pf-content-title">
-          <img :src="info1.iconImageUrl" alt="" class="pf-title-icon">
-          <div class="pf-title">
-            <span style="color:#9dc135;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:110px;">{{info1.title}}</span>
-            <span>{{info1.title_en}}</span>
-          </div>
+  <div class="performance">
+    <div class="pf-main">
+      <div class="pf-content" v-for="(info1 , key1) in info.items" :key="key1">
+        <silentbox-group>
+          <silentbox-item v-for="(info2 , key2) in info1.imageUrls" :key="key2" :src="info2">
+            <img v-if="key2===0" :src="info2" alt="" class="pf-content-img">
+          </silentbox-item>
+        </silentbox-group>
+        <div class="pf-content-title">
+            <img :src="info1.iconImageUrl" alt="" class="pf-title-icon">
+            <div class="pf-title">
+              <span style="color:#9dc135;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:110px;">{{info1.title}}</span>
+              <span style="color: rgb(228, 227, 227);">{{info1.title_en}}</span>
+            </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
