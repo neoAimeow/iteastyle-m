@@ -3,14 +3,17 @@ import Router from 'vue-router'
 
 import HomeIndex from '@/components/homepage/index.vue'
 import ProductDisplay from '@/components/homepage/productDisplay.vue'
-import ClassicCase from '@/components/homepage/classicCase.vue'
+import ServiceContent from '@/components/homepage/serviceContent.vue'
 import TeaState from '@/components/homepage/teaState.vue'
 import ContactUs from '@/components/homepage/contactUs.vue'
 
 import ProductInside from '@/components/homepage/productInside.vue'
 import TeaStateInside from '@/components/homepage/teaStateInside.vue'
-import ClassicCaseInside1 from '@/components/homepage/classicCaseInside1.vue'
-import ClassicCaseInside2 from '@/components/homepage/classicCaseInside2.vue'
+import DiyActivites from '@/components/service/diyActivites.vue'
+import Performanec from '@/components/service/performance.vue'
+import Seminar from '@/components/service/seminar.vue'
+import Souvvenir from '@/components/service/souvenir.vue'
+import TeaBreakService from '@/components/service/teaBreakService.vue'
 
 Vue.use(Router)
 
@@ -27,9 +30,9 @@ export default new Router({
       component: ProductDisplay
     },
     {
-      path: '/homepage/classicCase',
-      name: 'classicCase',
-      component: ClassicCase
+      path: '/homepage/serviceContent',
+      name: 'serviceContent',
+      component: ServiceContent
     },
     {
       path: '/homepage/teaState',
@@ -52,13 +55,29 @@ export default new Router({
       component: TeaStateInside
     },
     { 
-      path: '/homepage/classicCaseInside1',
-      name: 'classicCaseInside1',
-      component: ClassicCaseInside1},
+      path: '/service/diyActivites',
+      name: 'diyActivites',
+      component: DiyActivites
+    },
     {
-      path: '/homepage/classicCaseInside2',
-      name: 'classicCaseInside2',
-      component: ClassicCaseInside2
+      path: '/service/performance',
+      name: 'performance',
+      component: performance
+    },
+    {
+      path: '/service/seminar',
+      name: 'seminar',
+      component: Seminar
+    },
+    {
+      path: '/service/souvenir',
+      name: 'souvenir',
+      component: Souvenir
+    },
+    {
+      path: '/service/teaBreakService',
+      name: 'teaBreakService',
+      component: TeaBreakService
     }
   ]
 })

@@ -9,8 +9,8 @@ const menus = [{
     icon: '&#xe60e;'
 },
 {
-    title: '经典案例',
-    path: '/homepage/classicCase',
+    title: '服务内容',
+    path: '/homepage/serviceContent',
     icon: '&#xe6df;'
 },
 {

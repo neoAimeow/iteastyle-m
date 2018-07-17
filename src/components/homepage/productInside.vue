@@ -1,22 +1,28 @@
 <template>
-<div class="productinside">
-        <div class="name-border">
-            <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
-            <span class="name">{{title}}</span>
-        </div>
-        
-    <div class="pdinside-body">
-        <div v-for="(img,key) in imgs" :key="key" class="img">  
-            <img  class="body-img" :src="img" alt="">        
-            <div v-if="key==0" class="pd-introduction">
-                <span class="pd-word" v-html="content"></span>
-            </div>
+<div class="classinside-one">
+    
+    <div v-if="items.length==0 && isLoading == false" class="nocase"><span>您访问的服务暂无案例哦！</span></div>
+    <div class="case-body">
+               
+        <div v-for="(item,key) in items" :key="key">   
+           
+            <div class="picture"> 
+               <img class="case-picture" :src="item.imageArr[0]" alt="">
+               <div class="case-title">
+                   <span>{{item.title}}</span>
+               </div> 
+            </div>  
             
         </div>
+          
+    </div> 
+    <div class="case-foot">
+        <el-pagination
+            layout="prev, pager, next"
+            :total="totalCount" :page-size="pageSize" :current-page="currentPage" @current-change="currentPageChanged"
+        >
+        </el-pagination>
     </div>
-
-    
-    
 </div>
 </template>
 
@@ -24,108 +30,108 @@
 export default {
     data() {
         return {
-            imgs:[],
-            content:'',
-            title: ''
+            isLoading: true,
+            items:[
+
+            ],
+            currentPage:1,
+            totalCount:0,
+            pageSize:6
         }
-    },
+ },
 created: function() {
-    console.log(this.$route.query.id);
-    var that = this;
-     this.$ajax.get('/productShowerDetail', {
-        params:{
-            productShowerId:this.$route.query.id
-        }
-    })
-    .then(function (response) {
-      console.log(response);
-      that.content = response.data.model.content;
-      that.imgs = response.data.model.imageArr;
-      that.title = response.data.model.title;
-    })
-    .catch(function (response) {
-      console.log(response);
-    });
+    this.request();
+  },
+  methods: {
+      currentPageChanged(val) {
+          this.currentPage = val;
+              this.request();
+        console.log(`当前页: ${val}`);
+      },
+      request() {
+              var that = this;
+              
+            this.$ajax.get('/cases', {
+                params: {
+                    type:this.$route.query.type,
+                    page:this.currentPage,
+                    pageSize:this.pageSize
+                }
+
+            })
+            .then(function (response) {
+                console.log(response);
+                that.items = response.data.model.cases;
+                that.totalCount = response.data.model.totalCount
+                that.isLoading = false;
+            })
+            .catch(function (response) {
+                console.log(response);
+                that.isLoading = false;
+
+            });
+      }
   }
 }
 </script>
 
+
 <style scoped>
-    .productinside{
-        margin:0;
-        padding:0;
-        border-bottom:2px solid #9dc135;
-        display: flex;
-        flex-direction: column;
-       
-        
-    }
+.classinside-one{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    border-bottom:2px solid #9dc135;
+    width:100%;
+}
 
-    .name-border{
-        width:205px;
-        height:60px;
-        border:1px dotted #9dc135;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin:0 auto;
-        margin-bottom: 40px;
-        margin-top: 40px;
-      
-    }
-
-    .logo{
-        width:40px;
-        height:auto;
-    }
-
-    .name{
-        margin-left:5px;
-        color:#9dc135;
-    }
+.nocase{
+    text-align: center;
+    margin-top:50px;
+    color:#626262;
+}
+.case-body{
+    width:100%;   
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items: center;   
+   
+    margin-top:40px; 
     
-    .pdinside-body{
-        width:97%; 
-        margin:0 auto; 
-        margin-bottom: 40px;
-        
-       
-        
-    }
+}
 
-    .pd-introduction{
-        width:97%;
-        line-height: 2;      
-        margin:0 auto; 
-        /* background-color: blue; */
-        color:#626262;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top:20px;
-    }
+.picture{
+    width:130px;
+    height: 80px;
+    margin:10px;
+}
 
-    .pd-word{
-        margin:40px;
-        text-align: center;
-
-    }
-    .img{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        margin-bottom: 20px;
-    }
-    .body-img{
-        width:97%;
-       
-    }
-
-
-
+.case-picture{
+    width:130px;
+    height: 80px;
+    position:absolute;
+    z-index: -1;
+}
+.case-title{
+    width:130px;   
+    background-color: rgba(174,203,87, 0.83);
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    position: relative;
+    top: 45px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.case-foot{
     
+    
+    margin-bottom: 40px;
+
+}
 </style>
