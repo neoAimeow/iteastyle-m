@@ -38,6 +38,44 @@
         </div>
       </div>
   </div>
+  <div class="souvenir-main">
+    <div class="souvenir-main-title">
+      <span style="position: relative;letter-spacing:2px;top:30px;left:35px;">{{items.souvenir.title}}</span>
+      <div class="souvenir-main-title-cn"></div>
+      <div class="souvenir-main-title-hr"></div>
+      <span style="position: relative;top:5px;left:35px;font-size:10px;">{{items.souvenir.title_en}}</span>
+      <div class="souvenir-main-title-en"></div>
+    </div>
+    <div class="souvenir-main-gift">
+      <div class="souvenir-main-gitf-category" v-for="(info2 , key2) in items.mind.minds" :key="key2">
+        <div class="souvenir-main-gitf-list">
+          <el-table :data="info2.elements" stripe style="width: 250px;font-size:10px;">
+            <el-table-column prop="number" label="编号" width="50">
+            </el-table-column>
+            <el-table-column prop="elementName" label="品名" width="50">
+            </el-table-column>
+            <el-table-column prop="wrap" label="包装" width="50">
+            </el-table-column>
+            <el-table-column prop="size" label="规格" width="50">
+            </el-table-column>
+            <el-table-column prop="price" label="价格（RMB）">
+            </el-table-column>
+          </el-table>
+        </div>
+        <div class="souvenir-main-gitf-introduce">
+          <div class="gitf-introduce">
+            <div class="gitf-introduce-title">
+              <img :src="info2.itemImageUrl" alt="" />
+              <span style="color:#9dc135;font-size:18px;">- {{info2.itemTitle}} - -</span>
+            </div>
+            <div class="gitf-introduce-content">
+              <span v-html="info2.itemContent"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -129,5 +167,12 @@ export default {
   height:25px; 
   background-color: #9dc135; 
   border-radius:12.5px;
+}
+.souvenir-main-drink-subtitle2{
+  margin-left: 15px;
+  color: #9dc135;
+}
+.souvenir-main-drink-content{
+  margin-left: 40px;
 }
 </style>
