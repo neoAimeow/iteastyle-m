@@ -124,7 +124,7 @@ span {
     align-items: center;
     justify-content: center;
     background-color: #9dc135;
-    color: white;
+    color: #eaffbd;
     height: 100px;
 }
 .index-head-logo-font{
