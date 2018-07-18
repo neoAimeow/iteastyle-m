@@ -9,7 +9,7 @@
         <div class="home-head-icon">
           <div :style="data.style" v-for="(data,key) in menu" :key="key" :label="key">
             <router-link :index="data.title" :to="data.path" class="home-head-list">
-              <span v-html="data.icon" style="font-size:30px;"></span>
+              <span v-html="data.icon"></span>
               <span style="font-size: 13px;">{{data.title}}</span>
             </router-link>
           </div>
@@ -53,11 +53,11 @@ export default {
 <style>
 @font-face {
   font-family: 'iconfont';  /* project id 721549 */
-  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot');
-  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.woff') format('woff'),
-  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.eot');
+  src: url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.woff') format('woff'),
+  url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.svg#iconfont') format('svg');
 }
 span{
   font-family: iconfont;
