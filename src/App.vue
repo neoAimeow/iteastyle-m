@@ -9,7 +9,7 @@
         <div class="home-head-icon">
           <div style="font-size:35px;" v-for="(data,key) in menu" :key="key" :label="key">
             <router-link :index="data.title" :to="data.path" class="home-head-list">
-              <span v-html="data.icon"></span>
+              <span v-html="data.icon" style="font-size:30px;"></span>
               <span style="font-size: 13px;">{{data.title}}</span>
             </router-link>
           </div>
@@ -89,6 +89,7 @@ body,
 }
 .home-head-menu{
   width: 100%;
+  margin-top: 20px;
 }
 .home-head-icon a{
   color: #797979;
