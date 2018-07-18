@@ -5,7 +5,7 @@
       <span style="position: relative;letter-spacing:2px;top:30px;left:37px;width:100px;">{{items.souvenir.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:5px;left:37px;font-size:10px;width:100px;">{{items.souvenir.title_en}}</span>
+      <span style="position: relative;top:4px;left:37px;font-size:10px;width:100px;margin-top:2px;">{{items.souvenir.title_en}}</span>
       <div class="souvenir-main-title-en"></div>
     </div>
     <div class="souvenir-main-souvenir">
@@ -15,10 +15,10 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:37px;width:100px;">{{items.way.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:45px;width:100px;">{{items.way.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:5px;left:37px;font-size:10px;width:100px;">{{items.way.title_en}}</span>
+      <span style="position: relative;top:4px;left:37px;font-size:10px;width:100px;margin-top:2px;">{{items.way.title_en}}</span>
       <div class="souvenir-main-title-en"></div>
     </div>
       <div class="souvenir-main-drink">
@@ -40,10 +40,10 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:37px;width:100px;">{{items.souvenir.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:45px;width:100px;">{{items.mind.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:5px;left:37px;font-size:10px;width:100px;">{{items.souvenir.title_en}}</span>
+      <span style="position: relative;top:4px;left:37px;font-size:10px;width:100px;margin-top:2px;">{{items.mind.title_en}}</span>
       <div class="souvenir-main-title-en"></div>
     </div>
     <div class="souvenir-main-gift">
@@ -131,9 +131,8 @@ export default {
 }
 .souvenir-main-title-hr{
   width: 260px;
-  height: 1px;
-  border: none;
-  border-top: 2px solid #9dc135;
+  
+  border: 1px solid #9dc135;
 }
 .souvenir-main-title-cn{
     width: 100px;
