@@ -81,6 +81,7 @@
     
     .service-name{
         width:250px;
+        
         height:60px;       
         border:1.3px dotted #9dc135;
         display:flex;
