@@ -98,7 +98,8 @@ export default {
     }
     
     .product-name{
-        width:250px;
+        max-width:300px;
+        width:70%;
         height:60px;        
         border:1.3px dotted #9dc135;
         display:flex;
