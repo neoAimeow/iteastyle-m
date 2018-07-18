@@ -1,119 +1,147 @@
 <template>
-<div class="productinside">
-        <div class="name-border">
-            <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
-            <span class="name">{{title}}</span>
-        </div>
-        
-    <div class="pdinside-body">
-        <div v-for="(img,key) in imgs" :key="key" >          
-            <div v-if="key==1" class="pd-introduction">
-                <span class="pd-word">{{content}}</span>
+    <div class="td-container">
+        <div class="td-main">
+            <div class="td-main-img" v-for="(info1 , key) in info.cases" :key="key">
+                <silentbox-group>
+                    <silentbox-item v-for="(info2 , key2) in info1.imageArr" :key="key2" :src="info2">
+                        <img  v-if="key2===0" class="td-main-picture" :src="info1.imageArr[0]" alt="">
+                    </silentbox-item>
+                    <div class="td-main-title"><span>{{info1.title}}</span></div>
+                </silentbox-group>
             </div>
-            <img  class="body-img" :src="img" alt="">
         </div>
+        <el-pagination
+            layout="prev, pager, next"
+            :total="totalCount" :page-size="pageSize" :current-page="currentPage" @current-change="currentPageChanged" 
+        >
+        </el-pagination>
     </div>
 
     
     
 </div>
 </template>
-
 <script>
 export default {
     data() {
         return {
-            imgs:{
-                    
-            },
-            content:'',
-            title: ''
+            info:{},
+            currentPage:1,
+            pageSize:6,
+            totalCount: 0
         }
     },
 created: function() {
-    console.log(this.$route.query.id);
-    var that = this;
-     this.$ajax.get('/productShowerDetail', {
-        params:{
-            productShowerId:this.$route.query.id
-        }
-    })
-    .then(function (response) {
-      console.log(response);
-      that.content = response.data.model.content;
-      that.imgs = response.data.model.imageArr;
-      that.title = response.data.model.title;
-    })
-    .catch(function (response) {
-      console.log(response);
-    });
+    console.log(this.$route.query.type);
+    this.request();
+  },
+  methods : {
+      request() {
+        var that = this;
+        this.$ajax.get('/getCaseByType', {
+            params:{
+                type:this.$route.query.type,
+                page:this.currentPage,
+                pageSize:this.pageSize
+            }
+        })
+        .then(function (response) {
+        console.log(response);
+        that.info = response.data.model.items;
+        that.totalCount = response.data.model.totalCount;
+        })
+        .catch(function (response) {
+        console.log(response);
+        });
+      },
+      currentPageChanged(val) {
+        this.currentPage = val;
+        this.request();
+
+      }
   }
 }
 </script>
 
-<style scoped>
-    .productinside{
-        margin:0;
-        padding:0;
-        border-bottom:2px solid #9dc135;
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-    }
 
-    .name-border{
-        width:205px;
-        height:50px;
-        border:1px dotted #9dc135;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin:0 auto;
-        margin-bottom: 40px;
-        margin-top: 40px;
-      
-    }
+<style lang="scss">
+.td-container{
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    // border-bottom:2px solid #9dc135;
+    width:100%;
+    // background-color: aqua;
 
-    .logo{
-        width:40px;
-        height:auto;
-    }
+}
 
-    .name{
-        margin-left:5px;
-        color:#9dc135;
-    }
+.td-main{
+    // margin-top: 80px;
+    // width: 900px;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    width:320px;   
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    // align-items: center; 
+    // background-color: red; 
+    margin-bottom: 20px; 
+   
+    // margin-top:40px; 
+
+}
+.td-main-img{
+    // width: 300px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: flex-end;
+    width:130px;
+    height: 90px;
+    margin:10px;
+    // background-color: yellow;
     
-    .pdinside-body{
-        width:500px; 
-        margin:0 auto; 
-        margin-bottom: 40px;
-    }
 
-    .pd-introduction{
-        width:500px;
-        line-height: 2;      
-        margin:0 auto; 
-        /* background-color: blue; */
-        color:#626262;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+}
 
-    .pd-word{
-        margin:40px;
-        text-align: center;
+.td-main-picture{
+    // width: 270px;
+    // height: 200px; 
+    width:130px;
+    height: 90px;
+    //position:absolute;
+    //z-index: -1;
+   
 
-    }
-    .body-img{
-        width:500px;
-        height:300px;
-    }
+}
 
+.td-main-title{
+    // position: relative;
+    // top:-60px;
+    // color: white;
+    // background-color: rgba(180, 218, 44, 0.5);
+    // width: 270px;
+    // height: 40px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width:130px;   
+    background-color: rgba(174,203,87, 0.83);
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    position: relative;
+    top: -40px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 
-
-    
+}
 </style>

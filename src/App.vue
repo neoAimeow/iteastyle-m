@@ -6,18 +6,21 @@
         <img class="home-head-bgimg2" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
       </div>
       <div class="home-head-menu">
-        <el-menu class="el-menu-demo" active-text-color="#81b316" background-color="#ffffff" default-active="首页" :router="true" mode="horizontal">
-          <el-menu-item style="margin-right:-20px;" :index="data.title" v-for="(data,key) in menu" :key="key" :label="key" :route="data.path">
-            {{data.title}} 
-          </el-menu-item>        
-        </el-menu>
+        <div class="home-head-icon">
+          <div :style="data.style" v-for="(data,key) in menu" :key="key" :label="key">
+            <router-link :index="data.title" :to="data.path" class="home-head-list">
+              <span v-html="data.icon"></span>
+              <span style="font-size: 13px;">{{data.title}}</span>
+            </router-link>
+          </div>
+        </div>
       </div>
     </div>
   <router-view></router-view>
     <div class="home-foot">
       <div class="home-foot-left">
         <div class="home-foot-left-logo">
-          <img style="height: 50px;width: 50px;" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
+          <img style="height: 40px;width: 40px;" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
         </div>
         <div class="home-foot-left-order">
           <span>全国订购电话</span>
@@ -48,15 +51,25 @@ export default {
 </script>
 
 <style>
-ul,li{
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'iconfont';  /* project id 721549 */
+  src: url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.eot');
+  src: url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.woff') format('woff'),
+  url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_721549_gv2tbnt6yt8.svg#iconfont') format('svg');
+}
+span{
+  font-family: iconfont;
 }
 html,
 body,
 #app{
   margin: 0;
   padding: 0;
+}
+.home-head{
+  margin-bottom: 20px;
 }
 .home-head-bgimg{
   display: flex;
@@ -76,33 +89,57 @@ body,
 }
 .home-head-menu{
   width: 100%;
-  margin-left: -10px;
+  margin-top: 20px;
 }
-.el-menu-demo{
+.home-head-icon a{
+  color: #797979;
+}
+a.router-link-exact-active, li.router-link-exact-active a {
+  border-bottom: 1px solid #9dc135;
+  color: #9dc135;
+}
+.home-head-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-head-icon{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 .home-foot{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 20px;
+  height: 90px;
+  background-color: #f2f2f2;
+  border:none;
+  border-top:2px solid #9dc135;
+  color: #797979;
 }
 .home-foot-left{
   display: flex;
   flex-direction: row;
-}
-.home-foot-left-logo{
- 
+  align-items: center;
 }
 .home-foot-left-order{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 13px;
+  margin-left: 10px;
+}
+.home-foot-left-logo{
+  margin-left: 5px;
 }
 .home-foot-right{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
+  font-size: 13px;
 }
 </style>

@@ -1,32 +1,32 @@
 const menus = [{
     title: '首 页',
     path: '/',
-    icon: ''
-},
-{
-    title: '公司故事',
-    path: '/homepage/companyStory',
-    icon: ''
+    icon: '&#xe633;',
+    style:'font-size:30px;'
 },
 {
     title: '产品展示',
     path: '/homepage/productDisplay',
-    icon: ''
+    icon: '&#xe6e1;',
+    style:'font-size:30px;'
 },
 {
-    title: '经典案例',
-    path: '/homepage/classicCase',
-    icon: ''
+    title: '服务内容',
+    path: '/homepage/serviceContent',
+    icon: '&#xe6df;',
+    style:'font-size:30px;'
 },
 {
     title: '茶式动态',
     path: '/homepage/teaState',
-    icon: ''
+    icon: '&#xe9e5;',
+    style:'font-size:30px;'
 },
 {
     title: '联系我们',
     path: '/homepage/contactUs',
-    icon: ''
+    icon: '&#xe675;',
+    style:'font-size:30px;'
 }
 ]
 

@@ -1,111 +1,132 @@
 <template>
 <div class="productDisplay">
 
-    <div class="pd-ct">           
-        <div class="product-name" v-for="(item,key) in items" :key="key">
-            <router-link :to="{path:'/homepage/productInside',query: {id: item.id}}">                        
-                <img class="pd-img" :src="item.imageArr[0]">                       
-                <span>{{item.title}}</span>
-            </router-link>
+<div v-for="(item,key) in items" :key="key" >
+    <router-link :to="{path:'/homepage/productInside', query: {type: item.type}}">
+    <div class="product" >
+        <div class="product-name">
+            <img class="logo" :src="item.typeIcon">
+            <div class="title">
+                <span class="C-title">{{item.typeName}}</span>
+                <span class="E-title">{{item.typeNameEn}}</span>
+            </div>
         </div>
+        <span class="arrow">&#xe64a;</span>
+        <div class="produtc-picture">
+            <img class="picture" :src="item.typeImage">
+        </div>
+        
     </div>
-
-   <div class="pd-page">
-        <el-pagination
-            layout="prev, pager, next"
-            :total="totalCount" :page-size="pageSize" :current-page="currentPage" @current-change="currentPageChanged"
-        >
-        </el-pagination>
-   </div>
+    </router-link>
+</div>
 
 </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            items:[
-
-            ],
-            headerImageUrl:'',
-            currentPage:1,
-            totalCount:0,
-            pageSize:6
-        }
- },
-created: function() {
-    this.request();
+  data() {
+    return {
+      items:[]
+    }
   },
-  methods: {
-      currentPageChanged(val) {
-          this.currentPage = val;
-              this.request();
-        console.log(`当前页: ${val}`);
-      },
-      request() {
-              var that = this;
-            this.$ajax.get('/productShower', {
-                params: {
-                    page:this.currentPage,
-                    pageSize:this.pageSize
-                }
+  created: function() {
+    var that = this;
+     this.$ajax.get('/getCaseTypes', {
 
-            })
-            .then(function (response) {
-            console.log(response);
-            that.items = response.data.model.products;
-            that.totalCount = response.data.model.totalCount
-            that.headerImageUrl = response.data.model.headerImageUrl
-            })
-            .catch(function (response) {
-            console.log(response);
-            });
-      }
+    })
+    .then(function (response) {
+      console.log(response);
+      that.items = response.data.model;
+    })
+    .catch(function (response) {
+      console.log(response);
+    });
   }
 }
 </script>
 
 
 <style scoped>
-a{
-    color:#626262;
+@font-face {
+  font-family: 'iconfont';  /* project id 721549 */
+  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot');
+  src: url('//at.alicdn.com/t/font_721549_epzyyrpnt7.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.woff') format('woff'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_721549_epzyyrpnt7.svg#iconfont') format('svg');
+}
+
+    a{
+    color:#9dc135;
     text-decoration: none;
-}
-.productDisplay {
-    margin: 0;
-    padding: 0;
-    border-bottom:2px solid #9dc135;
-}
 
-.pd-ct {
-  margin: 0 auto;
-  max-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  margin-top: 40px;
-  margin-bottom: 20px;
 }
+    .productDisplay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;     
+        width:100%;
 
-.pd-img {
-  width: 265px;
-  height: 170px;
-  margin-bottom: 10px;
-}
+    }
+    .product{
+        width:100%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top:30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+    .arrow{
+        color:#9dc135;
+        font-size: 40px;
+        
+    }
+    .product-picture{
+        width:100%;
+        /* height:400px; */
+        display: flex;
+        justify-content: center; 
 
-.product-name {
-  width:265px;
-  text-align: center;
-  margin: 15px;
-  color: #626262;
-}
-
-.pd-page {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-
+    }
+    .picture{
+        width:90%;
+        /* height:400px;
+         */
+   
+    }
+    
+    .product-name{
+        max-width:300px;
+        width:70%;
+        height:60px;        
+        border:1.3px dotted #9dc135;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        width:40px;
+        height:auto;
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        height:40px;
+        /* background-color: blue; */
+    }
+    .C-title{
+        font-size: 20px;
+        letter-spacing:5px;
+       
+   
+    }
+    .E-title{
+        font-size:10px;
+        line-height: 0.8;
+    }
+     
 </style>
