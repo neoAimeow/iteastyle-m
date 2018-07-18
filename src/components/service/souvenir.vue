@@ -65,11 +65,11 @@
         <div class="souvenir-main-gitf-introduce">
           <div class="gitf-introduce">
             <div class="gitf-introduce-title">
-              <img :src="info2.itemImageUrl" alt="" style="width:140px;"/>
               <span style="color:#9dc135;font-size:18px;">- {{info2.itemTitle}} - -</span>
             </div>
             <div class="gitf-introduce-content">
               <span v-html="info2.itemContent"></span>
+              <img :src="info2.itemImageUrl" alt="" style="width:300px;"/>
             </div>
           </div>
         </div>
@@ -184,5 +184,17 @@ export default {
 .souvenir-main-drink-content{
   margin-left: 40px;
 }
-
+.souvenir-main-gift{
+  margin-top: 20px;
+}
+.souvenir-main-gitf-introduce{
+  margin-top: 20px;
+}
+.gitf-introduce-content{
+  width: 300px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 </style>
