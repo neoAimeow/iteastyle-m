@@ -70,10 +70,13 @@ export default {
 
     }
     .product{
-        width:250px;
+        width:100%;
         text-align: center;
         margin-bottom: 10px;
         margin-top:30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
     }
     .arrow{
         color:#9dc135;
@@ -81,16 +84,16 @@ export default {
         
     }
     .product-picture{
-        width:250px;
-        height:400px;
+        width:100%;
+        /* height:400px; */
         display: flex;
         justify-content: center; 
 
     }
     .picture{
-        width:250px;
-        height:400px;
-        
+        width:90%;
+        /* height:400px;
+         */
    
     }
     

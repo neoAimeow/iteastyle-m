@@ -5,7 +5,7 @@
             <router-link :to="{path:'./teaStateInside',query: {id: item.id}}">
                 <div class="ts-main-center">
                     <div class="ts-main-head"><span>{{item.title}}</span></div>
-                    <div class="ts-main-content"><span>{{item.content}}</span></div>
+                    <div class="ts-main-content"><span>{{item.summary}}</span></div>
                 </div>
             </router-link>
         </div>
@@ -66,10 +66,11 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100px;
     width: 80%;
     border: 1.5px dotted #9dc135;
     margin-top: 20px;
+    margin-bottom: 20px;
+    
 }
 .ts-main-head{
     background-color: #9dc135;
@@ -78,21 +79,28 @@ a{
     border-radius: 5px;
     color: white;
     max-width: 140px;
-    margin-left: -40px;
-    margin-top: -10px;
+    margin-left: -50px;
+    top: -15px;
     font-size: 13px;
-    padding: 5px;
+    padding: 10px;
+    position: relative;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
+
 .ts-main-content{
     margin-top: 20px;
-    font-size: 10px;
+    
     color: #626262;
     font-size:12px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-    width: auto;
-    max-width: 200px;
-    text-align: center;
+    width: 250px;
+    text-align: left;
+    /* background-color:red; */
+    margin-bottom: 20px;
+    margin-top:5px;
 }
 </style>
