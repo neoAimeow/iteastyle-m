@@ -2,7 +2,7 @@
 <div class="souvenir">
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:7px;width:100px;">{{items.souvenir.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:27px;left:7px;width:100px;">{{items.souvenir.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
     </div>
@@ -13,7 +13,7 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:15px;width:100px;">{{items.way.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:27px;left:15px;width:100px;">{{items.way.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
     </div>
@@ -36,7 +36,7 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:15px;width:100px;">{{items.mind.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:27px;left:15px;width:100px;">{{items.mind.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
     </div>
