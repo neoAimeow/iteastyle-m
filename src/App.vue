@@ -2,8 +2,7 @@
   <div id="app">
     <div class="home-head">
       <div class="home-head-bgimg">
-        <img class="home-head-bgimg1" src="http://pa74otoy6.bkt.clouddn.com/pd-title-background.png" alt="">
-        <img class="home-head-bgimg2" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
+        <img class="home-head-bgimg-inner" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png" alt="">
       </div>
       <div class="home-head-menu">
         <div class="home-head-icon">
@@ -72,21 +71,19 @@ body,
   margin-bottom: 20px;
 }
 .home-head-bgimg{
+  width: 100%;
+  height: 100px;
+  background: url("http://pa74otoy6.bkt.clouddn.com/pd-title-background.png") repeat-x;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  background-size:auto 100% ;
 }
-.home-head-bgimg1{
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  z-index: -1;
-}
-.home-head-bgimg2{
+.home-head-bgimg-inner{
   height: 50px;
   width: 50px;
 }
+
 .home-head-menu{
   width: 100%;
   margin-top: 20px;
