@@ -160,7 +160,22 @@
 export default {
     data() {
         return {
-            responseDatas: {}
+            responseDatas: {
+                note:{
+                    notes:[],
+                    title:'',
+                    title_en:''
+                },
+                order:{
+                    title:'',
+                    title_en:'',
+                    orderWay:{},
+                    menu:{}
+                },
+                orderMode:{},
+                process:{},
+                range:{}
+            }
         }
     },
     created() {
