@@ -112,8 +112,8 @@ created: function() {
     // height: 200px; 
     width:130px;
     height: 90px;
-    position:absolute;
-    z-index: -1;
+    //position:absolute;
+    //z-index: -1;
    
 
 }
@@ -134,7 +134,7 @@ created: function() {
     color: white;
     line-height: 25px;
     position: relative;
-    top: 45px;
+    top: -40px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
