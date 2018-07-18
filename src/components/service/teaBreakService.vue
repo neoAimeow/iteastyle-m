@@ -172,9 +172,22 @@ export default {
                     orderWay:{},
                     menu:{}
                 },
-                orderMode:{},
-                process:{},
-                range:{}
+                orderMode:{
+                    title:'',
+                    title_en:'',
+                    qrImageUrl:'',
+                    qrTitle:''
+                },
+                process:{
+                    processes:[],
+                    title:'',
+                    title_en:''
+                },
+                range:{
+                    title:'',
+                    title_en:'',
+                    ranges:[]
+                }
             }
         }
     },
