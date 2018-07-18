@@ -65,7 +65,7 @@ a{
 .ts-main{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     width: 80%;
     border: 1.5px dotted #9dc135;
     margin-top: 20px;
@@ -79,8 +79,8 @@ a{
     border-radius: 5px;
     color: white;
     max-width: 140px;
-    margin-left: -50px;
-    top: -15px;
+    margin-left: -20px;
+    top: -20px;
     font-size: 13px;
     padding: 10px;
     position: relative;
@@ -90,17 +90,21 @@ a{
 }
 
 .ts-main-content{
-    margin-top: 20px;
-    
+    margin-top: 20px;   
     color: #626262;
     font-size:12px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-    width: 250px;
+    /* width: 250px; */
+    width:80%;
     text-align: left;
     /* background-color:red; */
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     margin-top:5px;
+    margin:0 auto;
+    
 }
+
+    
 </style>
