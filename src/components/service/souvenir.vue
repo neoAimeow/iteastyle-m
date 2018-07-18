@@ -2,11 +2,9 @@
 <div class="souvenir">
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:37px;width:100px;">{{items.souvenir.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:7px;width:100px;">{{items.souvenir.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:4px;left:37px;font-size:10px;width:100px;margin-top:2px;">{{items.souvenir.title_en}}</span>
-      <div class="souvenir-main-title-en"></div>
     </div>
     <div class="souvenir-main-souvenir">
       <img :src="items.souvenir.imageUrl" alt="" class="souvenir-main-souvenir-img">
@@ -15,11 +13,9 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:45px;width:100px;">{{items.way.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:15px;width:100px;">{{items.way.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:4px;left:37px;font-size:10px;width:100px;margin-top:2px;">{{items.way.title_en}}</span>
-      <div class="souvenir-main-title-en"></div>
     </div>
       <div class="souvenir-main-drink">
         <div class="souvenir-main-drink-introduce">
@@ -40,11 +36,9 @@
   </div>
   <div class="souvenir-main">
     <div class="souvenir-main-title">
-      <span style="position: relative;letter-spacing:2px;top:30px;left:45px;width:100px;">{{items.mind.title}}</span>
+      <span style="position: relative;letter-spacing:2px;top:30px;left:15px;width:100px;">{{items.mind.title}}</span>
       <div class="souvenir-main-title-cn"></div>
       <div class="souvenir-main-title-hr"></div>
-      <span style="position: relative;top:4px;left:37px;font-size:10px;width:100px;margin-top:2px;">{{items.mind.title_en}}</span>
-      <div class="souvenir-main-title-en"></div>
     </div>
     <div class="souvenir-main-gift">
       <div class="souvenir-main-gitf-category" v-for="(info2 , key2) in items.mind.minds" :key="key2">
@@ -69,7 +63,7 @@
             </div>
             <div class="gitf-introduce-content">
               <span v-html="info2.itemContent"></span>
-              <img :src="info2.itemImageUrl" alt="" style="width:300px;"/>
+              <img :src="info2.itemImageUrl" alt="" style="width:300px;margin-top:20px;"/>
             </div>
           </div>
         </div>
@@ -136,7 +130,6 @@ export default {
 }
 .souvenir-main-title-cn{
     width: 100px;
-    margin-left: 30px;
     border-top: 30px solid #9dc135;
     border-top-left-radius: 10px;
     border-top-right-radius:10px;
@@ -154,6 +147,8 @@ export default {
   align-items: center;
 }
 .souvenir-main-souvenir-img{
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 250px;
 }
 .souvenir-main-drink{
@@ -163,6 +158,8 @@ export default {
   width: 250px;
 }
 .souvenir-main-drink-img{
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 250px;
 }
 .souvenir-main-drink-subtitle{
