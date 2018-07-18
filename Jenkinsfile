@@ -25,7 +25,7 @@ pipeline {
               sh 'sshpass -p $PASSWORD ssh -v -o StrictHostKeyChecking=no $USERNAME@118.178.131.105 docker-compose -f /root/service/iteastyle-m/docker-compose.yml stop '
               sh 'sshpass -p $PASSWORD ssh -v -o StrictHostKeyChecking=no $USERNAME@118.178.131.105 docker-compose -f /root/service/iteastyle-m/docker-compose.yml rm -f '
               sh 'sshpass -p $PASSWORD ssh -v -o StrictHostKeyChecking=no $USERNAME@118.178.131.105 docker-compose -f /root/service/iteastyle-m/docker-compose.yml up -d'
-              bearychatSend 'iteastyle-m正式环境发布成功,访问地址为https://m.iteastyle.cn/ ，开瓶红酒庆祝啊~'
+              bearychatSend 'iteastyle-m正式环境发布成功,访问地址为https://m.iteastyle.cn/'
             }
           } else {
             withCredentials(bindings: [usernamePassword(credentialsId: 'server-118.178.131.105', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
@@ -36,7 +36,7 @@ pipeline {
               sh 'sshpass -p $PASSWORD ssh -v -o StrictHostKeyChecking=no $USERNAME@118.178.131.105 docker-compose -f /root/service/iteastyle-m-test/docker-compose.yml stop '
               sh 'sshpass -p $PASSWORD ssh -v -o StrictHostKeyChecking=no $USERNAME@118.178.131.105 docker-compose -f /root/service/iteastyle-m-test/docker-compose.yml rm -f '
               sh 'sshpass -p $PASSWORD ssh -v -o StrictHostKeyChecking=no $USERNAME@118.178.131.105 docker-compose -f /root/service/iteastyle-m-test/docker-compose.yml up -d'
-              bearychatSend 'iteastyle-m开发环境发布成功，访问地址为 https://iteastyle-m.aimeow.com/ , 快用力操它！'
+              bearychatSend 'iteastyle-m开发环境发布成功，访问地址为 https://iteastyle-m.aimeow.com/'
             }
           }
         }
