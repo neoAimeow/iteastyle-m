@@ -90,11 +90,12 @@ body,
 .home-head-menu{
   width: 100%;
 }
-a.router-link-active, li.router-link-active a {
-  color: #9dc135;
+.home-head-icon a{
+  color: #797979;
 }
 a.router-link-exact-active, li.router-link-exact-active a {
   border-bottom: 1px solid #9dc135;
+  color: #9dc135;
 }
 .home-head-list{
   display: flex;
