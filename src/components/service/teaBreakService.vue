@@ -95,7 +95,7 @@
                     </div>
                     <div class="order-bottom"><span>{{value.content}}</span></div>                
                 </div>
-                <span class="order-arrow">&#xe631;</span>
+                <!-- <span class="order-arrow">&#xe631;</span> -->
             </div>
         </div>
     
@@ -353,6 +353,7 @@ export default {
 
 .menu-bottom > li {
   margin-top: 5px;
+  
 }
 
 .menu-bottom{
