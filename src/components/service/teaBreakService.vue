@@ -377,6 +377,8 @@ export default {
 .menu-head-name {
   background-color: #9dc135;
   height: 50px;
+  border-radius: 1.5px;
+  /* border: 1px solid #9dc135; */
 }
 
 .menu-head-name > span {
@@ -391,6 +393,7 @@ export default {
   border-right: solid 25px transparent;
   border-bottom: solid 25px transparent;
   border-left: solid 25px #9dc135;
+  margin-left: -1px;
 }
 
 .menu-head {
