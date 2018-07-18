@@ -8,13 +8,9 @@
       <div class="home-head-menu">
         <div class="home-head-icon">
           <div style="font-size:35px;" v-for="(data,key) in menu" :key="key" :label="key">
-            <span v-html="data.icon"></span>
-          </div>
-        </div>
-        <div class="home-head-list">
-          <div style="margin-left:15px;"  v-for="(data,key) in menu" :key="key" :label="key" >
-            <router-link :index="data.title" :to="data.path">
-              {{data.title}}
+            <router-link :index="data.title" :to="data.path" class="home-head-list">
+              <span v-html="data.icon"></span>
+              <span style="font-size: 13px;">{{data.title}}</span>
             </router-link>
           </div>
         </div>
@@ -102,9 +98,9 @@ a.router-link-exact-active, li.router-link-exact-active a {
 }
 .home-head-list{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  font-size: 13px;
+  align-items: center;
 }
 .home-head-icon{
   display: flex;
