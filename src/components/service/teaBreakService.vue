@@ -170,7 +170,10 @@ export default {
                     title:'',
                     title_en:'',
                     orderWay:{},
-                    menu:{}
+                    menu:{
+                        title:'',
+                        menus:[]
+                    }
                 },
                 orderMode:{
                     title:'',
