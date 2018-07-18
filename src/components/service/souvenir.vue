@@ -56,16 +56,16 @@
             </el-table-column>
             <el-table-column prop="wrap" label="包装" width="60">
             </el-table-column>
-            <el-table-column prop="size" label="规格" width="60">
+            <el-table-column prop="size" label="规格" width="130">
             </el-table-column>
-            <el-table-column prop="price" label="价格（RMB）" width="59">
+            <el-table-column prop="price" label="价格（RMB）" width="100">
             </el-table-column>
           </el-table>
         </div>
         <div class="souvenir-main-gitf-introduce">
           <div class="gitf-introduce">
             <div class="gitf-introduce-title">
-              <img :src="info2.itemImageUrl" alt="" style="width:250px;"/>
+              <img :src="info2.itemImageUrl" alt="" style="width:140px;"/>
               <span style="color:#9dc135;font-size:18px;">- {{info2.itemTitle}} - -</span>
             </div>
             <div class="gitf-introduce-content">
