@@ -15,7 +15,7 @@
               </div>
             </div>
         </div>
-        <div class="index-main">
+        <router-link :to="{path:'/service/teaBreakService'}" class="index-main">
           <div class="index-main-title">
             <span style="font-size:45px;">&#xe654;</span>
             <div class="index-main-stitle">
@@ -27,6 +27,8 @@
           <div class="index-main-img">
             <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20break%20service-wap.png" />
           </div>
+        </router-link>
+        <router-link :to="{path:'/service/souvenir'}" class="index-main">
           <div class="index-main-title">
             <span style="font-size:40px;">&#xe654;</span>
             <div class="index-main-stitle">
@@ -38,6 +40,8 @@
           <div class="index-main-img">
             <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20gift%20service-wap.png" />
           </div>
+        </router-link>
+        <router-link :to="{path:'/service/seminar'}" class="index-main">
           <div class="index-main-title">
             <span style="font-size:40px;">&#xe654;</span>
             <div class="index-main-stitle">
@@ -49,11 +53,11 @@
           <div class="index-main-img">
             <progressive-img src="http://pa74otoy6.bkt.clouddn.com/Tea%20art%20service-wap.png" />
           </div>
+        </router-link>
             <!-- <div v-for="(item2,key) in items.serviceImages" :key="key">
                 <div style="display:flex;flex-dirction:column;justify-content:center;"><span  class="index-main-title">茶歇服务</span></div>
               <div style="display:flex;flex-dirction:column;justify-content:center;"><progressive-img class="index-main-img" :src="item2" /></div>
             </div> -->
-        </div>
     </div>
 </template>
 
