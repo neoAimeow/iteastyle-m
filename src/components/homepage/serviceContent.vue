@@ -13,12 +13,24 @@
 
     <div class="hr"></div>
 
-    <router-link :to="{path:'/service/performance'}">
+    <router-link :to="{path:'/service/souvenir'}">
         <div class="service-name">
             <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
             <div class="title">
-                <span class="C-title">茶艺表演</span>
-                <span class="E-title">TEA PERFORMANCE</span>
+                <span class="C-title">杭州伴手礼</span>
+                <span class="E-title">TEA SOUVENIR</span>
+            </div>
+        </div>
+    </router-link>  
+
+    <div class="hr"></div>
+
+        <router-link :to="{path:'/service/seminar'}">
+        <div class="service-name">
+            <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
+            <div class="title">
+                <span class="C-title">茶事活动</span>
+                <span class="E-title">TEA CULTURE SEMINAR</span>
             </div>
         </div>
     </router-link>
@@ -36,28 +48,6 @@
     </router-link>
 
     <div class="hr"></div>
-
-    <router-link :to="{path:'/service/seminar'}">
-        <div class="service-name">
-            <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
-            <div class="title">
-                <span class="C-title">茶文化讲座</span>
-                <span class="E-title">TEA CULTURE SEMINAR</span>
-            </div>
-        </div>
-    </router-link>
-
-    <div class="hr"></div>
-
-    <router-link :to="{path:'/service/souvenir'}">
-        <div class="service-name">
-            <img class="logo" src="http://pa74otoy6.bkt.clouddn.com/opaque-logo.png">
-            <div class="title">
-                <span class="C-title">杭州伴手礼</span>
-                <span class="E-title">TEA SOUVENIR</span>
-            </div>
-        </div>
-    </router-link>  
 
 
 </div>
