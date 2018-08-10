@@ -2,8 +2,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './registerServiceWorker'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import ELEMENT from 'element-ui'
+if (process.env.NODE_ENV === 'development') {
+    require('element-ui/lib/theme-chalk/index.css')
+    Vue.use(moment)
+    Vue.use(ELEMENT)
+}
+Vue.filter('dateFormat', function (dataStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+    return moment(dataStr).format(pattern)
+})
+
 import axios from 'axios'
 
 import VueProgressiveImage from 'vue-progressive-image'
@@ -11,7 +19,6 @@ import VueAMap from 'vue-amap'
 import VueSilentbox from 'vue-silentbox'
 
 Vue.config.productionTip = false
-Vue.use(ElementUI)
 Vue.use(VueProgressiveImage)
 Vue.use(VueAMap)
 Vue.use(VueSilentbox)
