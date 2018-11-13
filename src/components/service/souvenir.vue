@@ -86,8 +86,7 @@ export default {
   methods: {
     request:function() {
       var that = this;
-      this.$ajax.get('/getTeaGiftService',{
-      })
+        this.$ajax.get('/getData', {params: {key: 'teaGift'}})
       .then(function (response) {
         console.log(response);
         that.items = response.data.model;
