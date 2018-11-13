@@ -2,7 +2,7 @@
     <div class="index-container">
         <div class="index-head">
             <el-carousel :height="screenWidth/3+'px'">
-                <el-carousel-item v-for="(item1,key) in items.headerImages" :key="key">
+                <el-carousel-item v-for="(item1,key) in items.homepageBannerUrls" :key="key">
                     <progressive-img :src="item1" />
                 </el-carousel-item>
             </el-carousel>
@@ -93,9 +93,8 @@ export default {
   },
   created: function() {
     var that = this;
-     this.$ajax.get('/homepage', {
+      this.$ajax.get('/getData', {params: {key: 'common'}})
 
-    })
     .then(function (response) {
       console.log(response.data);
       that.items = response.data.model;
