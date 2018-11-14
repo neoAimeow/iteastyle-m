@@ -32,9 +32,7 @@ export default {
   },
   created: function() {
     var that = this;
-     this.$ajax.get('/getCaseTypes', {
-
-    })
+      this.$ajax.get('/getData', {params: {key: 'caseType'}})
     .then(function (response) {
       console.log(response);
       that.items = response.data.model;
